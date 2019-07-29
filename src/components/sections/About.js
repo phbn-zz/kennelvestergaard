@@ -141,10 +141,4 @@ const Art = styled.figure`
   width: 100%;
 `;
 
-const styledImg = styled.img`
-  margin: 0;
-  max-width: 380px;
-  width: 100%;
-`;
-
 export default About;

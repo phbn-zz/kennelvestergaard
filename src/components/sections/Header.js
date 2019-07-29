@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
 import paws from '../../images/art/paws.svg';
 
 import { Container } from '@components/global';

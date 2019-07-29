@@ -8,16 +8,30 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `team`,
-        path: `${__dirname}/src/images/team`,
-      },
+        name: `gallery`,
+        path: `${__dirname}/src/images/gallery`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `doggrowth`,
+        path: `${__dirname}/src/images/doggrowth`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `dogtraining`,
+        path: `${__dirname}/src/images/dogtraining`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `art`,
-        path: `${__dirname}/src/images/art`,
-      },
+        path: `${__dirname}/src/images/art`
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -30,14 +44,14 @@ module.exports = {
         background_color: `#8bd8ed`,
         theme_color: `#8bd8ed`,
         display: `minimal-ui`,
-        icon: `static/favicon.svg`,
-      },
+        icon: `static/favicon.svg`
+      }
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`average`, `prata\:400,700`],
-      },
+        fonts: [`average`, `prata\:400,700`]
+      }
     },
     {
       resolve: `gatsby-plugin-alias-imports`,
@@ -48,9 +62,9 @@ module.exports = {
           '@images': path.resolve(__dirname, 'src/images'),
           '@sections': path.resolve(__dirname, 'src/components/sections'),
           '@styles': path.resolve(__dirname, 'src/styles/'),
-          '@static': path.resolve(__dirname, 'static/'),
-        },
-      },
-    },
-  ],
+          '@static': path.resolve(__dirname, 'static/')
+        }
+      }
+    }
+  ]
 };
