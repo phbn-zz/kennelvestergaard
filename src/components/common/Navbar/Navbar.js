@@ -65,7 +65,7 @@ class Navbar extends Component {
           <BrandContainer>
             <Brand>Kennel Vestergaard</Brand>
             <SocialIcons>
-              <a href={'https://www.google.dk'}>
+              <a href={'https://www.facebook.com/NanaFlatcoatedRetriver/'}>
                 <img src={FacebookIcon} alt="link" />
               </a>
             </SocialIcons>
