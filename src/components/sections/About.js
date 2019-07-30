@@ -14,7 +14,7 @@ const FAQS = [
         modern JavaScript and CSS and more — all set up and waiting for you to
         start building
       </>
-    ),
+    )
   },
   {
     title: 'Where can you source data from?',
@@ -25,7 +25,7 @@ const FAQS = [
         services, APIs, databases, your file system, and more directly into your
         pages using GraphQL.
       </>
-    ),
+    )
   },
   {
     title: 'How do I scale Gatsby sites?',
@@ -36,7 +36,7 @@ const FAQS = [
         maintenance, and scaling fears. Gatsby.js builds your site as “static”
         files which can be deployed easily on dozens of services.
       </>
-    ),
+    )
   },
   {
     title: 'How does do I future-proof my website?',
@@ -48,7 +48,7 @@ const FAQS = [
         Every website is a web app and every web app is a website. Gatsby.js is
         the universal JavaScript framework you’ve been waiting for.
       </>
-    ),
+    )
   },
   {
     title: 'What exactly does Gatsby build?',
@@ -60,23 +60,17 @@ const FAQS = [
         loaded, Gatsby prefetches resources for other pages so clicking around
         the site feels incredibly fast.
       </>
-    ),
-  },
+    )
+  }
 ];
 
-const Faq = () => (
+const About = () => (
   <Section id="om os">
     <Container>
-      <h1 style={{ marginBottom: 40 }}>Frequently Asked Questions</h1>
-      <div>
-        {FAQS.map(({ title, content }) => (
-          <FaqItem title={title} key={title}>
-            {content()}
-          </FaqItem>
-        ))}
-      </div>
+      <h1 style={{ marginBottom: 40 }}>Om os</h1>
+      <div>TBC</div>
     </Container>
   </Section>
 );
 
-export default Faq;
+export default About;

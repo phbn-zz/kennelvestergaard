@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Scrollspy from 'react-scrollspy';
-import styled from 'styled-components'
-import ExternalLink from '@common/ExternalLink';
+import styled from 'styled-components';
 
 import FacebookIcon from '@static/icons/facebook.svg';
 
@@ -63,11 +62,15 @@ class Navbar extends Component {
     return (
       <Nav {...this.props}>
         <StyledContainer>
-          <Brand>Kennel Vestergaard</Brand>
-<SocialIcons>
-            <ExternalLink href={'https://www.google.dk'}>
-              <img src={FacebookIcon} alt="link" />
-            </ExternalLink></SocialIcons>
+          <BrandContainer>
+            <Brand>Kennel Vestergaard</Brand>
+            <SocialIcons>
+              <a href={'https://www.google.dk'}>
+                <img src={FacebookIcon} alt="link" />
+              </a>
+            </SocialIcons>
+          </BrandContainer>
+
           <Mobile>
             <button onClick={this.toggleMobileMenu} style={{ color: 'black' }}>
               <MenuIcon />
@@ -88,12 +91,26 @@ class Navbar extends Component {
   }
 }
 
-const SocialIcons = styled.div`
+const BrandContainer = styled.div`
   display: flex;
-  justify-content: left;
+  flex-direction: row;
+`;
+
+const SocialIcons = styled.div`
+  a {
+    text-decoration: none;
+    opacity: 0.7;
+    color: ${props => props.theme.color.black.regular};
+  }
+
+  &:hover {
+    a {
+      opacity: 1;
+    }
+  }
 
   img {
-    margin: 0 8px;
+    margin: 9px;
     width: 24px;
     height: 24px;
   }
