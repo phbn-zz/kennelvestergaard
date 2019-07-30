@@ -22,6 +22,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `prius`,
+        path: `${__dirname}/src/images/prius`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `dogtraining`,
         path: `${__dirname}/src/images/dogtraining`
       }
