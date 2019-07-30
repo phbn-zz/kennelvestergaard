@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
+import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import dog from '../../images/art/randomdog.jpeg';
 
@@ -58,6 +59,7 @@ const Puppies = () => (
                 in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                 nulla pariatur. Excepteur sint occaecat cupidatat non proident,
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Faren er <Link to="/Prius">Prius</Link>
               </p>
             </div>
             <img src={dog} alt="dog" />
@@ -72,8 +74,8 @@ const Puppies = () => (
                 igennem sammen med Nana. Jeg vil løbende holde listen ajourført,
                 så det er muligt at se, hvad de små oplever her hos os. Når I
                 har fået jeres nye hvalp med hjem vil prægningen naturligvis
-                fortsætte, og jeg vil anbefale jer at læse Hundens fysiske og
-                psykiske udvikling, ønsker I yderligere så kan bogen Retriver
+                fortsætte, og jeg vil anbefale jer at læse <Link to='/DogDevelopment'>Hundens fysiske og
+                psykiske udvikling</Link>, ønsker I yderligere så kan bogen Retriver
                 hvalpe- træning af Norman Zvolsky anbefales.
               </p>
             </InsideGridDiv>
@@ -193,13 +195,12 @@ const List = styled.ul`
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.16);
 `;
 
-
 const ListItem = styled.li`
   display: flex;
   flex-direction: column;
   padding: 5px 0px;
   ${props => props.theme.font_size.small};
-    color: ${props => props.theme.color.black.light};
+  color: ${props => props.theme.color.black.light};
   border-top: 1px solid ${gray5};
   :first-child {
     border-top: none;
@@ -207,10 +208,10 @@ const ListItem = styled.li`
 `;
 
 const InsideGridDiv = styled.div`
-display: flex;
-flex-direction: column;
-padding-top: 24px;
-justify-content: 'space-evenly';
-`
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+  justify-content: 'space-evenly';
+`;
 
 export default Puppies;

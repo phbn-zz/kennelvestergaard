@@ -65,7 +65,7 @@ class Navbar extends Component {
           <BrandContainer>
             <Brand>Kennel Vestergaard</Brand>
             <SocialIcons>
-              <a href={'https://www.facebook.com/NanaFlatcoatedRetriver/'}>
+              <a href={'https://www.facebook.com/NanaFlatcoatedRetriever/'}>
                 <img src={FacebookIcon} alt="link" />
               </a>
             </SocialIcons>
@@ -113,10 +113,6 @@ const SocialIcons = styled.div`
     margin: 9px;
     width: 24px;
     height: 24px;
-  }
-
-  @media (max-width: ${props => props.theme.screen.sm}) {
-    margin-top: 40px;
   }
 `;
 
