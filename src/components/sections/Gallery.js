@@ -1,6 +1,7 @@
 import React from 'react';
 import Masonry from '../common/Masonry';
 import { StaticQuery, graphql } from 'gatsby';
+import styled from 'styled-components'
 
 import { Section, Container } from '@components/global';
 
@@ -12,10 +13,12 @@ const Gallery = () => (
           edges {
             node {
               relativePath
+              id
               childImageSharp {
-                fluid (grayscale: true){
+                fluid {
                   aspectRatio
                   src
+                  originalImg
                 }
               }
             }
@@ -24,14 +27,15 @@ const Gallery = () => (
       }
     `}
     render={data => (
-      <Section id="gallery" accent="secondary">
+      <Section id="galleri" accent="secondary">
         <Container style={{ position: 'relative' }}>
           <h1>Galleri</h1>
           <Masonry
             itemsPerRow={[4]} // This will be changed to `[2, 3]` later
             images={data.allFile.edges.map(({ node }) => ({
               ...node.childImageSharp.fluid,
-              caption: `${node.relativePath}`
+              caption: `${node.relativePath}`,
+              id: `${node.id}`
             }))}
           />
         </Container>
@@ -39,5 +43,6 @@ const Gallery = () => (
     )}
   />
 );
+
 
 export default Gallery;

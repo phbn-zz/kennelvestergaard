@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Scrollspy from 'react-scrollspy';
+import styled from 'styled-components'
+import ExternalLink from '@common/ExternalLink';
+
+import FacebookIcon from '@static/icons/facebook.svg';
 
 import { Container } from '@components/global';
 import {
@@ -15,7 +19,7 @@ import {
 
 import { ReactComponent as MenuIcon } from '@static/icons/menu.svg';
 
-const NAV_ITEMS = ['Hvalpe', 'Tæve', 'Gallery', 'Købsaftale', 'Om os'];
+const NAV_ITEMS = ['Hvalpe', 'Tæve', 'Galleri', 'Købsaftale', 'Om os'];
 
 class Navbar extends Component {
   state = {
@@ -60,6 +64,10 @@ class Navbar extends Component {
       <Nav {...this.props}>
         <StyledContainer>
           <Brand>Kennel Vestergaard</Brand>
+<SocialIcons>
+            <ExternalLink href={'https://www.google.dk'}>
+              <img src={FacebookIcon} alt="link" />
+            </ExternalLink></SocialIcons>
           <Mobile>
             <button onClick={this.toggleMobileMenu} style={{ color: 'black' }}>
               <MenuIcon />
@@ -79,5 +87,20 @@ class Navbar extends Component {
     );
   }
 }
+
+const SocialIcons = styled.div`
+  display: flex;
+  justify-content: left;
+
+  img {
+    margin: 0 8px;
+    width: 24px;
+    height: 24px;
+  }
+
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    margin-top: 40px;
+  }
+`;
 
 export default Navbar;

@@ -4,20 +4,22 @@ import Layout from '@common/Layout';
 import Navbar from '@common/Navbar';
 
 import Header from '@sections/Header';
-import About from '@sections/About';
-import Brands from '@sections/Brands';
+import Puppies from '@sections/Puppies';
+import Bitch from '@sections/Bitch';
 import Gallery from '@sections/Gallery';
-import Faq from '@sections/Faq';
+import Terms from '@sections/Terms';
+import About from '@sections/About';
 import Footer from '@sections/Footer';
 
 const IndexPage = () => (
   <Layout>
     <Navbar />
     <Header />
-    <About />
-    <Brands />
+    <Puppies />
+    <Bitch />
     <Gallery />
-    <Faq />
+    <Terms />
+    <About />
     <Footer />
   </Layout>
 );
