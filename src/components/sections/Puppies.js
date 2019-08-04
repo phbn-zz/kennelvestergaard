@@ -11,6 +11,17 @@ const Puppies = () => (
   <StaticQuery
     query={graphql`
       query {
+        puppies: file(
+          sourceInstanceName: { eq: "doggrowth" }
+          name: { eq: "IMG_2435" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 760) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+
         art_fast: file(
           sourceInstanceName: { eq: "art" }
           name: { eq: "fast" }
@@ -62,7 +73,9 @@ const Puppies = () => (
                 Faren er <Link to="/Prius">Prius</Link>
               </p>
             </div>
-            <img src={dog} alt="dog" />
+            <Art>
+              <Img fluid={data.puppies.childImageSharp.fluid} />
+            </Art>
           </Grid>
           <Grid inverse>
             <InsideGridDiv>
@@ -74,9 +87,12 @@ const Puppies = () => (
                 igennem sammen med Nana. Jeg vil løbende holde listen ajourført,
                 så det er muligt at se, hvad de små oplever her hos os. Når I
                 har fået jeres nye hvalp med hjem vil prægningen naturligvis
-                fortsætte, og jeg vil anbefale jer at læse <Link to='/DogDevelopment'>Hundens fysiske og
-                psykiske udvikling</Link>, ønsker I yderligere så kan bogen Retriver
-                hvalpe- træning af Norman Zvolsky anbefales.
+                fortsætte, og jeg vil anbefale jer at læse{' '}
+                <Link to="/DogDevelopment">
+                  Hundens fysiske og psykiske udvikling
+                </Link>
+                , ønsker I yderligere så kan bogen Retriver hvalpe- træning af
+                Norman Zvolsky anbefales.
               </p>
             </InsideGridDiv>
             <InsideGridDiv>
@@ -138,7 +154,6 @@ const Puppies = () => (
 );
 
 const gray5 = '#e0dddd';
-const accent1 = '#9b8dab';
 
 const Grid = styled.div`
   display: grid;

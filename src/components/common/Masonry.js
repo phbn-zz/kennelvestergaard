@@ -2,24 +2,23 @@ import React, { useState } from 'react';
 import Img from 'gatsby-image';
 import Carousel, { Modal, ModalGateway } from 'react-images';
 import { chunk, sum } from 'lodash';
-import styled from 'styled-components'
+import styled from 'styled-components';
 import { Box, Link } from 'rebass';
 
 const Masonry = ({ images, itemsPerRow }) => {
   const aspectRatios = images.map(image => image.aspectRatio);
 
-  const rowAspectRatioSumsByBreakpoints = itemsPerRow.map(
-    itemsPerRow =>
-      chunk(aspectRatios, itemsPerRow).map(rowAspectRatios =>
-        sum(rowAspectRatios)
-      )
+  const rowAspectRatioSumsByBreakpoints = itemsPerRow.map(itemsPerRow =>
+    chunk(aspectRatios, itemsPerRow).map(rowAspectRatios =>
+      sum(rowAspectRatios)
+    )
   );
 
- const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
   const [modalCurrentIndex, setModalCurrentIndex] = useState(0);
 
   const closeModal = () => setModalIsOpen(false);
-  const openModal = (imageIndex) => {
+  const openModal = imageIndex => {
     setModalCurrentIndex(imageIndex);
     setModalIsOpen(true);
   };
@@ -27,30 +26,30 @@ const Masonry = ({ images, itemsPerRow }) => {
   return (
     <MasonryContainer>
       {images.map((image, i) => (
-                <Link
+        <Link
           key={image.id}
           href={image.originalImg}
-          onClick={(e) => {
+          onClick={e => {
             e.preventDefault();
             openModal(i);
           }}
         >
-        <Box
-          key={image.src}
-          as={Img}
-          fluid={image}
-          title={image.caption}
-          width={rowAspectRatioSumsByBreakpoints.map(
-            // Return a value for each breakpoint
-            (rowAspectRatioSums, j) => {
-              // Find out which row the image is in and get its aspect ratio sum
-              const rowIndex = Math.floor(i / itemsPerRow[j]);
-              const rowAspectRatioSum = rowAspectRatioSums[rowIndex];
+          <Box
+            key={image.src}
+            as={Img}
+            fluid={image}
+            title={image.caption}
+            width={rowAspectRatioSumsByBreakpoints.map(
+              // Return a value for each breakpoint
+              (rowAspectRatioSums, j) => {
+                // Find out which row the image is in and get its aspect ratio sum
+                const rowIndex = Math.floor(i / itemsPerRow[j]);
+                const rowAspectRatioSum = rowAspectRatioSums[rowIndex];
 
-              return `${(image.aspectRatio / rowAspectRatioSum) * 100}%`;
-            }
-          )}
-          css={`
+                return `${(image.aspectRatio / rowAspectRatioSum) * 100}%`;
+              }
+            )}
+            css={`
               display: inline-block;
               vertical-align: middle;
               transition: filter 0.3s;
@@ -59,26 +58,29 @@ const Masonry = ({ images, itemsPerRow }) => {
               }
             `}
           />
-          </Link>
+        </Link>
       ))}
 
-       {ModalGateway && (
+      {ModalGateway && (
         <ModalGateway>
           {modalIsOpen && (
-            <Modal onClose={closeModal}  styles={{
+            <Modal
+              onClose={closeModal}
+              styles={{
                 blanket: base => ({
                   ...base,
-                  backgroundColor: 'rgba(255,255,255,0.85)',
+                  backgroundColor: 'rgba(255,255,255,0.85)'
                 }),
                 dialog: base => ({
                   ...base,
-                  maxWidth: 640,
-                }),
-              }}>
+                  maxWidth: 640
+                })
+              }}
+            >
               <Carousel
                 views={images.map(({ originalImg, caption }) => ({
                   source: originalImg,
-                  caption,
+                  caption
                 }))}
                 currentIndex={modalCurrentIndex}
                 components={{ FooterCount: () => null }}
@@ -88,19 +90,19 @@ const Masonry = ({ images, itemsPerRow }) => {
                     background: 'none !important',
                     padding: 0,
                     paddingBottom: 10,
-                    position: 'static',
+                    position: 'static'
                   }),
                   headerClose: base => ({
                     ...base,
                     color: '#666',
 
-                    ':hover': { color: '#DE350B' },
+                    ':hover': { color: '#DE350B' }
                   }),
                   view: base => ({
                     ...base,
-                    maxHeight: 600,
-                    overflow: 'hidden',
-                  }),
+                    maxHeight: 650,
+                    overflow: 'hidden'
+                  })
                 }}
               />
             </Modal>
@@ -121,6 +123,6 @@ const MasonryContainer = styled.div`
     }`};
   margin-top: 24px;
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.16);
-`
+`;
 
 export default Masonry;

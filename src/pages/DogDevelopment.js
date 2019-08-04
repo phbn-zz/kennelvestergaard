@@ -11,7 +11,7 @@ const Development = () => (
   <Layout>
     <NavbarSecondpage />
     <HeaderWrapper>
-      <Container>
+      <Container accent="secondary">
         <h1>Hundens fysiske og psykiske udvikling.</h1>
         <p>
           Udviklingen kan v&aelig;re interessant i forhold til din hunds
@@ -194,7 +194,7 @@ const Development = () => (
 );
 
 const HeaderWrapper = styled.header`
-  background-color: ${props => props.theme.color.primary};
+  background-color: ${props => props.theme.color.white.dark};
   padding-top: 96px;
 
   @media (max-width: ${props => props.theme.screen.md}) {

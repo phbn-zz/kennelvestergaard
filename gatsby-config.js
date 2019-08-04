@@ -8,13 +8,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `gallery`,
-        path: `${__dirname}/src/images/gallery`
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         name: `doggrowth`,
         path: `${__dirname}/src/images/doggrowth`
       }

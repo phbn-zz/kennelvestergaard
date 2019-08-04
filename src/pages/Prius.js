@@ -6,7 +6,7 @@ import NavbarSecondpage from '../components/common/Navbar/NavBarSecondPages';
 
 import Masonry from '../components/common/Masonry';
 import Layout from '@common/Layout';
-import { Container } from '@components/global';
+import { Container, Section } from '@components/global';
 
 const Prius = () => (
   <Layout>
@@ -33,7 +33,7 @@ const Prius = () => (
       `}
       render={data => (
         <HeaderWrapper>
-          <Container>
+          <Container accent="secondary">
             <h1>Hanhund</h1>
             <p>
               Prius er importeret fra England og er efter den mest vindende tæve
@@ -59,7 +59,7 @@ const Prius = () => (
 );
 
 const HeaderWrapper = styled.header`
-  background-color: ${props => props.theme.color.primary};
+  background-color: ${props => props.theme.color.white.dark};
   padding-top: 96px;
 
   @media (max-width: ${props => props.theme.screen.md}) {

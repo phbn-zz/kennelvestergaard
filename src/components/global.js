@@ -6,6 +6,14 @@ export const Container = styled.div`
   margin: 0 auto;
   padding: 0 16px;
 
+  ${props =>
+    props.accent &&
+    `background-color: ${
+      props.accent === 'secondary'
+        ? props.theme.color.white.dark
+        : props.theme.color.primary
+    }`};
+
   @media (min-width: ${props => props.theme.screen.xs}) {
     max-width: 540px;
   }

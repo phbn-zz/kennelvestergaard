@@ -64,15 +64,4 @@ const SocialIcons = styled.div`
   }
 `;
 
-const BackText = styled.p`
-  a {
-    text-decoration: none;
-  }
-
-  margin: 4px;
-  font-family: ${props => props.theme.font.secondary};
-  ${props => props.theme.font_size.small};
-  color: ${props => props.theme.color.white.regular};
-`;
-
 export default NavbarSecondpage;

@@ -9,9 +9,12 @@ const Bitch = () => (
   <StaticQuery
     query={graphql`
       {
-        file(relativePath: { eq: "IMG_2435.jpg" }) {
+        nanna: file(
+          sourceInstanceName: { eq: "doggrowth" }
+          name: { eq: "IMG_2435" }
+        ) {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 760) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -23,12 +26,12 @@ const Bitch = () => (
         <Container>
           <Grid>
             <div>
-              <h2>Tæve - Nanna</h2>
-              <p>Tekst om Nanna</p>
+              <h2>Nanna</h2>
+              <p>Nanna er hundemor til vores kuld af hvalpe</p>
             </div>
-            <imageContainer>
-              <Img fluid={data.file.childImageSharp.fluid} />
-            </imageContainer>
+            <Art>
+              <Img fluid={data.nanna.childImageSharp.fluid} />
+            </Art>
           </Grid>
         </Container>
       </Section>
@@ -67,7 +70,7 @@ const Grid = styled.div`
   }
 `;
 
-const imageContainer = styled.figure`
+const Art = styled.figure`
   margin: 0;
   max-width: 380px;
   width: 100%;
