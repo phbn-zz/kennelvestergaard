@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import headerBGImage from '../images/art/headerbg.jpeg';
 
 export const Container = styled.div`
   max-width: 1200px;
