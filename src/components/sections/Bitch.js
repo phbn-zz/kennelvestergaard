@@ -4,63 +4,73 @@ import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { Section, Container } from '@components/global';
-import ExternalLink from '@common/ExternalLink';
 
 const Bitch = () => (
-  <Section id="tæve" accent>
-    <StyledContainer>
-      <div>
-        <h1>Tæve - Nanna</h1>
-        <LogoGrid>Yolo</LogoGrid>
-      </div>
-      <div>Picture of Nanna</div>
-    </StyledContainer>
-  </Section>
+  <StaticQuery
+    query={graphql`
+      {
+        file(relativePath: { eq: "IMG_2435.jpg" }) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <Section id="tæve" accent>
+        <Container>
+          <Grid>
+            <div>
+              <h2>Tæve - Nanna</h2>
+              <p>Tekst om Nanna</p>
+            </div>
+            <imageContainer>
+              <Img fluid={data.file.childImageSharp.fluid} />
+            </imageContainer>
+          </Grid>
+        </Container>
+      </Section>
+    )}
+  />
 );
 
-const LogoGrid = styled.div`
+const Grid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 64px;
+  grid-template-columns: 3fr 2fr;
+  grid-gap: 40px;
+  text-align: right;
+  align-items: center;
   justify-items: center;
-  margin-top: 96px;
+  margin: 24px 0;
 
-  a {
-    svg {
-      width: 100%;
+  ${props =>
+    props.inverse &&
+    `
+    text-align: left;
+    grid-template-columns: 2fr 3fr;
+  `}
+
+  h2 {
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: ${props => props.theme.screen.md}) {
+    grid-template-columns: 1fr;
+    text-align: left;
+    margin-bottom: 96px;
+
+    &:last-child {
+      margin-bottom: 24px;
     }
   }
-
-  @media (max-width: ${props => props.theme.screen.sm}) {
-    grid-template-columns: 1fr;
-  }
 `;
 
-const StyledContainer = styled(Container)`
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-
-  @media (max-width: ${props => props.theme.screen.md}) {
-    justify-content: center;
-  }
-`;
-
-const Art = styled.figure`
-  width: 600px;
-  position: absolute;
-  top: -12%;
-  right: 50%;
-
-  @media (max-width: ${props => props.theme.screen.lg}) {
-    top: 0;
-    right: 65%;
-    width: 500px;
-  }
-
-  @media (max-width: ${props => props.theme.screen.md}) {
-    display: none;
-  }
+const imageContainer = styled.figure`
+  margin: 0;
+  max-width: 380px;
+  width: 100%;
 `;
 
 export default Bitch;

@@ -100,7 +100,7 @@ const SocialIcons = styled.div`
   a {
     text-decoration: none;
     opacity: 0.7;
-    color: ${props => props.theme.color.black.regular};
+    color: ${props => props.theme.color.white.regular};
   }
 
   &:hover {
