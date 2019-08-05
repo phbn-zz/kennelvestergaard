@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
-import dog from '../../images/art/randomdog.jpeg';
 
 import { Section, Container } from '@components/global';
 
@@ -12,7 +11,7 @@ const Puppies = () => (
     query={graphql`
       query {
         puppies: file(
-          sourceInstanceName: { eq: "doggrowth" }
+          sourceInstanceName: { eq: "nana" }
           name: { eq: "IMG_2435" }
         ) {
           childImageSharp {
@@ -160,9 +159,9 @@ const Grid = styled.div`
   grid-template-columns: 3fr 2fr;
   grid-gap: 40px;
   text-align: right;
-  align-items: center;
   justify-items: center;
   margin: 24px 0;
+  padding-bottom: 24px;
 
   ${props =>
     props.inverse &&

@@ -9,16 +9,14 @@ const Gallery = () => (
   <StaticQuery
     query={graphql`
       query {
-        allFile(filter: { sourceInstanceName: { eq: "doggrowth" } }) {
+        allFile(filter: { sourceInstanceName: { eq: "nana" } }) {
           edges {
             node {
               relativePath
               id
               childImageSharp {
                 fluid {
-                  aspectRatio
-                  src
-                  originalImg
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
@@ -29,7 +27,7 @@ const Gallery = () => (
     render={data => (
       <Section id="galleri" accent="secondary">
         <Container style={{ position: 'relative' }}>
-          <h1>Galleri</h1>
+          <h2>Galleri</h2>
           <Masonry
             itemsPerRow={[4]} // This will be changed to `[2, 3]` later
             images={data.allFile.edges.map(({ node }) => ({

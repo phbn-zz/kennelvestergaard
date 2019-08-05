@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import headerBGImage from '../images/art/headerbg.jpeg';
 
 export const Container = styled.div`
   max-width: 1200px;
@@ -53,4 +52,49 @@ export const Section = styled.section`
         ? props.theme.color.white.dark
         : props.theme.color.primary
     }`};
+`;
+
+export const Grid = styled.div`
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-gap: 40px;
+  text-align: right;
+  justify-items: center;
+  margin: 24px 0;
+  padding-bottom: 24px;
+
+  ${props =>
+    props.inverse &&
+    `
+    text-align: left;
+    grid-template-columns: 2fr 3fr;
+  `}
+
+  h2 {
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: ${props => props.theme.screen.md}) {
+    grid-template-columns: 1fr;
+    text-align: left;
+    margin-bottom: 96px;
+
+    &:last-child {
+      margin-bottom: 24px;
+    }
+
+    ${props =>
+      props.inverse &&
+      `
+        ${Art} {
+          order: 2;
+        }
+    `}
+  }
+`;
+
+const Art = styled.figure`
+  margin: 0;
+  max-width: 380px;
+  width: 100%;
 `;

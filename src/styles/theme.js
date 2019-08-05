@@ -1,6 +1,6 @@
 const theme = {
   font: {
-    primary: `'Vollkorn', serif;`,
+    primary: `'Spectral', serif;`,
     secondary: `'Average', serif`
   },
   font_size: {
@@ -32,4 +32,3 @@ const theme = {
 };
 
 export default theme;
-theme;

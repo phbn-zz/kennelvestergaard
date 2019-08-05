@@ -8,8 +8,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `doggrowth`,
-        path: `${__dirname}/src/images/doggrowth`
+        name: `nana`,
+        path: `${__dirname}/src/images/nana`
       }
     },
     {
@@ -17,13 +17,6 @@ module.exports = {
       options: {
         name: `prius`,
         path: `${__dirname}/src/images/prius`
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `dogtraining`,
-        path: `${__dirname}/src/images/dogtraining`
       }
     },
     {
@@ -50,7 +43,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`average`, `prata\:400,700`]
+        fonts: [`average`, `prata:400,700`]
       }
     },
     {
