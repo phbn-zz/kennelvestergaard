@@ -2,14 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Container } from '@components/global';
-import ExternalLink from '@common/ExternalLink';
 
 import FacebookIcon from '@static/icons/facebook.svg';
 
 const SOCIAL = [
   {
     icon: FacebookIcon,
-    link: 'https://instagram.com/ajay_ns'
+    link: 'https://www.facebook.com/NanaFlatcoatedRetriever/'
   }
 ];
 
@@ -18,18 +17,13 @@ const Footer = () => (
     <FooterWrapper>
       <StyledContainer>
         <Copyright>
-          <h2>Kennel Vestergaard</h2>
-          <span>
-            Produceret af
-            {` `}
-            <ExternalLink href="https://github.com/phbn">@phbn</ExternalLink>
-          </span>
+          <h2>© Kennel Vestergaard</h2>
         </Copyright>
         <SocialIcons>
           {SOCIAL.map(({ icon, link }) => (
-            <ExternalLink href={link}>
+            <a href={link}>
               <img src={icon} alt="link" />
-            </ExternalLink>
+            </a>
           ))}
         </SocialIcons>
       </StyledContainer>

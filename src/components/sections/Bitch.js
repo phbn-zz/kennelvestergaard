@@ -20,8 +20,8 @@ const Bitch = () => (
         }
 
         stamtavle: file(
-          sourceInstanceName: { eq: "nana" }
-          name: { eq: "P5033424" }
+          sourceInstanceName: { eq: "art" }
+          name: { eq: "nana_stamtavle" }
         ) {
           childImageSharp {
             fluid(maxWidth: 760) {

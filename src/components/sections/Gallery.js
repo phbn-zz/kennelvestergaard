@@ -1,7 +1,6 @@
 import React from 'react';
 import Masonry from '../common/Masonry';
 import { StaticQuery, graphql } from 'gatsby';
-import styled from 'styled-components';
 
 import { Section, Container } from '@components/global';
 
@@ -16,7 +15,9 @@ const Gallery = () => (
               id
               childImageSharp {
                 fluid {
-                  ...GatsbyImageSharpFluid
+                  src
+                  originalImg
+                  aspectRatio
                 }
               }
             }

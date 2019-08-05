@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import { Link } from 'gatsby';
-import Img from 'gatsby-image';
+import ImageContainer from '../common/ImageContainer';
 
 import { Section, Container } from '@components/global';
 
@@ -12,7 +12,7 @@ const Puppies = () => (
       query {
         puppies: file(
           sourceInstanceName: { eq: "nana" }
-          name: { eq: "IMG_2435" }
+          name: { eq: "P5033424" }
         ) {
           childImageSharp {
             fluid(maxWidth: 760) {
@@ -21,9 +21,9 @@ const Puppies = () => (
           }
         }
 
-        art_fast: file(
-          sourceInstanceName: { eq: "art" }
-          name: { eq: "fast" }
+        nana_practice: file(
+          sourceInstanceName: { eq: "nana" }
+          name: { eq: "IMG_3760" }
         ) {
           childImageSharp {
             fluid(maxWidth: 760) {
@@ -32,20 +32,9 @@ const Puppies = () => (
           }
         }
 
-        art_learn: file(
-          sourceInstanceName: { eq: "art" }
-          name: { eq: "learn_yourself" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 760) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
-
-        art_ideas: file(
-          sourceInstanceName: { eq: "art" }
-          name: { eq: "ideas" }
+        nana_practice_2: file(
+          sourceInstanceName: { eq: "nana" }
+          name: { eq: "IMG_3432" }
         ) {
           childImageSharp {
             fluid(maxWidth: 760) {
@@ -73,11 +62,26 @@ const Puppies = () => (
               </p>
             </div>
             <Art>
-              <Img fluid={data.puppies.childImageSharp.fluid} />
+              <ImageContainer fluid={data.puppies.childImageSharp.fluid} />
             </Art>
           </Grid>
           <Grid inverse>
             <InsideGridDiv>
+              <h3>Socialisering</h3>
+              <List>
+                <ListItem>At køre bil</ListItem>
+                <ListItem>Skud med hundeprop</ListItem>
+                <ListItem>Dødt vildt fasan</ListItem>
+                <ListItem>Fløjte signal</ListItem>
+                <ListItem>Børn</ListItem>
+                <ListItem>Støvsuger</ListItem>
+                <ListItem>Heste</ListItem>
+                <ListItem>Hunde</ListItem>
+                <ListItem>Katte</ListItem>
+                <ListItem>Andre mennesker</ListItem>
+              </List>
+            </InsideGridDiv>
+            <div>
               <h2>En god start</h2>
               <p>
                 Vi gør vores bedste for at hvalpen har fået den bedst tænkelige
@@ -86,29 +90,14 @@ const Puppies = () => (
                 igennem sammen med Nana. Jeg vil løbende holde listen ajourført,
                 så det er muligt at se, hvad de små oplever her hos os. Når I
                 har fået jeres nye hvalp med hjem vil prægningen naturligvis
-                fortsætte, og jeg vil anbefale jer at læse{' '}
+                fortsætte. Jeg vil anbefale jer at læse{' '}
                 <Link to="/DogDevelopment">
                   Hundens fysiske og psykiske udvikling
                 </Link>
-                , ønsker I yderligere så kan bogen Retriver hvalpe- træning af
-                Norman Zvolsky anbefales.
+                , og ønsker I yderligere, så kan bogen Retriever hvalpe- træning
+                af Norman Zvolsky anbefales.
               </p>
-            </InsideGridDiv>
-            <InsideGridDiv>
-              <h2>Socialisering - Vores hvalpe er tilvænnet</h2>
-              <List>
-                <ListItem>Køre bil</ListItem>
-                <ListItem>Skud hundeprop</ListItem>
-                <ListItem>Dødt vildt fasan</ListItem>
-                <ListItem>Fløjte signal</ListItem>
-                <ListItem>Børn</ListItem>
-                <ListItem>Støvsuger</ListItem>
-                <ListItem>Heste</ListItem>
-                <ListItem>Andre</ListItem>
-                <ListItem>hunde</ListItem>
-                <ListItem>Katte</ListItem>
-              </List>
-            </InsideGridDiv>
+            </div>
           </Grid>
           <Grid>
             <div>
@@ -124,25 +113,32 @@ const Puppies = () => (
               </p>
             </div>
             <Art>
-              <Img fluid={data.art_ideas.childImageSharp.fluid} />
+              <ImageContainer
+                fluid={data.nana_practice.childImageSharp.fluid}
+              />
             </Art>
           </Grid>
           <Grid inverse>
             <Art>
-              <Img fluid={data.art_learn.childImageSharp.fluid} />
+              <ImageContainer
+                fluid={data.nana_practice_2.childImageSharp.fluid}
+              />
             </Art>
             <div>
               <h2>Videre opdragelse</h2>
               <p>
-                Jeg kan på det varmeste anbefale Dansk Retriever Klub
-                {`(Se link under "Om os")`}, til træning af hunden. Deres
-                træning er særlig tilpasset netop vores hunderace, og der er en
-                særlig forståelse for retrieverens behov og udvikling. Derudover
-                tilbyder de mange forskellige træningsformer, alt efter hvad man
-                synes er sjovt. Lydighed, familiehunde træning, nosework,
-                jagttræning/markprøver og meget mere. Vær opmærksom på, at man
-                skal være hurtig ude for at få plads på holdene. Derfor
-                medfølger der en hvalpepakke med 6 mdr. medlemskab til DRK.
+                Jeg kan på det varmeste anbefale{' '}
+                <a href="https://www.dansk-retriever-klub.dk/">
+                  Dansk Retriever Klub
+                </a>
+                , til træning af hunden. Deres træning er særlig tilpasset netop
+                vores hunderace, og der er en særlig forståelse for retrieverens
+                behov og udvikling. Derudover tilbyder de mange forskellige
+                træningsformer, alt efter hvad man synes er sjovt. Lydighed,
+                familiehunde træning, nosework, jagttræning/markprøver og meget
+                mere. Vær opmærksom på, at man skal være hurtig ude for at få
+                plads på holdene. Derfor medfølger der en hvalpepakke med 6 mdr.
+                medlemskab til DRK.
               </p>
             </div>
           </Grid>
@@ -151,8 +147,6 @@ const Puppies = () => (
     )}
   />
 );
-
-const gray5 = '#e0dddd';
 
 const Grid = styled.div`
   display: grid;
@@ -205,8 +199,8 @@ const List = styled.ul`
   background-color: #fff;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
-  border-top: 3px solid '#9b8dab';
-  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.16);
+  border-top: 3px solid '#000';
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.16);
 `;
 
 const ListItem = styled.li`
@@ -215,7 +209,7 @@ const ListItem = styled.li`
   padding: 5px 0px;
   ${props => props.theme.font_size.small};
   color: ${props => props.theme.color.black.light};
-  border-top: 1px solid ${gray5};
+  border-top: 1px solid #e0dddd;
   :first-child {
     border-top: none;
   }
@@ -225,7 +219,8 @@ const InsideGridDiv = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 24px;
-  justify-content: 'space-evenly';
+  justify-content: center;
+  align-items: center;
 `;
 
 export default Puppies;
