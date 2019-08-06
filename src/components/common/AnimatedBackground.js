@@ -1,5 +1,17 @@
 import SVG from './svg';
-import { UpDown, UpDownWide } from '../styles/animations';
+import { UpDown, UpDownWide } fro// TODO: https://github.com/typescript-eslint/typescript-eslint/pull/762 Change quotes setup so that type can also use double quotes
+// eslint-disable-next-line
+type IconType = "triangle" | "circle" | "arrowUp" | "upDown" | "box" | "hexa" | "cross"
+
+type SVGProps = {
+  stroke?: boolean
+  color?: string
+  width: number
+  icon: IconType
+  left: string
+  top: string
+  hiddenMobile?: boolean
+}m '../../styles/animations';
 
 const AnimatedBackground = () => (
   <div>

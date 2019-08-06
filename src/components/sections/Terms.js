@@ -1,11 +1,11 @@
 import React from 'react';
-import { Section, Container } from '@components/global';
+import { Section, Container, HeaderText } from '@components/global';
 
 const Terms = () => (
   <Section id="købsaftale" accent>
     <Container>
       <div>
-        <h2>Købsaftale</h2>
+        <HeaderText>Købsaftale</HeaderText>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad

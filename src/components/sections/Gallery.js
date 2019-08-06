@@ -2,7 +2,7 @@ import React from 'react';
 import Masonry from '../common/Masonry';
 import { StaticQuery, graphql } from 'gatsby';
 
-import { Section, Container } from '@components/global';
+import { Section, Container, HeaderText } from '@components/global';
 
 const Gallery = () => (
   <StaticQuery
@@ -28,7 +28,7 @@ const Gallery = () => (
     render={data => (
       <Section id="galleri" accent="secondary">
         <Container style={{ position: 'relative' }}>
-          <h2>Galleri</h2>
+          <HeaderText>Galleri</HeaderText>
           <Masonry
             itemsPerRow={[4]} // This will be changed to `[2, 3]` later
             images={data.allFile.edges.map(({ node }) => ({

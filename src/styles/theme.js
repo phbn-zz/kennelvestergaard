@@ -1,7 +1,8 @@
 const theme = {
   font: {
     primary: `'Spectral', serif;`,
-    secondary: `'Average', serif`
+    secondary: `'Average', serif`,
+    headers: `'Work Sans', sans-serif;`
   },
   font_size: {
     small: 'font-size: 20px; line-height: 30px',
@@ -19,7 +20,8 @@ const theme = {
     black: {
       lighter: '#ABA8AF',
       light: '#564F62',
-      regular: '#211E26'
+      regular: '#211E26',
+      colormind: '#17151F'
     },
     primary: '#80bdff'
   },

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import paws from '../../images/art/paws.svg';
 
-import { Container } from '@components/global';
+import { Container, HeaderText } from '@components/global';
 import ExternalLink from '@common/ExternalLink';
 
 const Header = () => (
@@ -11,10 +11,10 @@ const Header = () => (
       <Grid>
         <img src={paws} alt="paws" />
         <Text>
-          <h2>
+          <HeaderText>
             Vores hunde er avlet efter Dansk Retriever Klub og Dansk Kennel
             Klubs avlsanbefalinger.
-          </h2>
+          </HeaderText>
           <br />
           <p>
             <ExternalLink href="hvalpe">

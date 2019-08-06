@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Container } from '@components/global';
+import { Container, HeaderText } from '@components/global';
 
 import FacebookIcon from '@static/icons/facebook.svg';
 
@@ -17,7 +17,7 @@ const Footer = () => (
     <FooterWrapper>
       <StyledContainer>
         <Copyright>
-          <h2>© Kennel Vestergaard</h2>
+          <HeaderText>© Kennel Vestergaard</HeaderText>
         </Copyright>
         <SocialIcons>
           {SOCIAL.map(({ icon, link }) => (

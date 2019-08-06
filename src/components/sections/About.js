@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Section, Container, Grid } from '@components/global';
+import { Section, Container, Grid, HeaderText } from '@components/global';
 
 const Links = [
   { link: 'http://www.flatcoat.dk', name: 'FlatCoat.dk' },
@@ -22,7 +22,7 @@ const About = () => (
     <Container>
       <Grid inverse>
         <div>
-          <h2>Om os</h2>
+          <HeaderText>Om os</HeaderText>
           <p>
             Vi bor i udkanten af Herfølge, på et mindre husmandssted hvor Nana
             for det meste bevæger sig frit rundt. Udover Nana har vi katte og

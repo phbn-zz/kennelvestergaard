@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import { Link } from 'gatsby';
 import ImageContainer from '../common/ImageContainer';
 
-import { Section, Container } from '@components/global';
+import { Section, Container, HeaderText, Divider } from '@components/global';
 
 const Puppies = () => (
   <StaticQuery
@@ -49,7 +49,8 @@ const Puppies = () => (
         <Container>
           <Grid>
             <div>
-              <h2>Første kuld 2019</h2>
+              <HeaderText>Første kuld 2019</HeaderText>
+              <Divider />
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -82,7 +83,8 @@ const Puppies = () => (
               </List>
             </InsideGridDiv>
             <div>
-              <h2>En god start</h2>
+              <HeaderText>En god start</HeaderText>
+              <Divider inverse />
               <p>
                 Vi gør vores bedste for at hvalpen har fået den bedst tænkelige
                 start på livet. I kan bl.a. se under Socialisering af hvalpe fra
@@ -101,7 +103,8 @@ const Puppies = () => (
           </Grid>
           <Grid>
             <div>
-              <h2>Praktisk om din hvalp</h2>
+              <HeaderText>Praktisk om din hvalp</HeaderText>
+              <Divider />
               <p>
                 Hvalpen er chippet og har DKK stambog. Derudover har den fået
                 ormekur. Husk, at den skal have ormekur igen inden 12 ugers
@@ -125,7 +128,8 @@ const Puppies = () => (
               />
             </Art>
             <div>
-              <h2>Videre opdragelse</h2>
+              <HeaderText>Videre opdragelse</HeaderText>
+              <Divider inverse />
               <p>
                 Jeg kan på det varmeste anbefale{' '}
                 <a href="https://www.dansk-retriever-klub.dk/">
@@ -164,7 +168,7 @@ const Grid = styled.div`
     grid-template-columns: 2fr 3fr;
   `}
 
-  h2 {
+  HeaderText {
     margin-bottom: 16px;
   }
 

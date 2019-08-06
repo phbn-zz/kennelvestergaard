@@ -1,4 +1,22 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const getRandomColor = alpha => {
+  let r = Math.floor(Math.random() * 255);
+  let g = Math.floor(Math.random() * 255);
+  let b = 200;
+  let a = alpha;
+  return `rgba(${r},${g},${b},${a})`;
+};
+
+const HeaderLoader = keyframes`
+0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+`;
 
 export const Container = styled.div`
   max-width: 1200px;
@@ -97,4 +115,23 @@ const Art = styled.figure`
   margin: 0;
   max-width: 380px;
   width: 100%;
+`;
+
+export const HeaderText = styled.h2`
+  font-size: 40px;
+  animation: ${HeaderLoader} 2s 0s;
+  font-family: ${props => props.theme.font.headers};
+  color: ${props => props.theme.color.black.colormind};
+`;
+
+export const Divider = styled.hr`
+  display: flex;
+  border: none;
+  height: 4px;
+  background-color: #a25666;
+  width: 65%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  ${props => (props.inverse ? 'margin-left: 0;' : 'margin-right: 0;')}
 `;
