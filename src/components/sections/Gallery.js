@@ -18,6 +18,7 @@ const Gallery = () => (
                   src
                   originalImg
                   aspectRatio
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }
             }

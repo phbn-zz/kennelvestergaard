@@ -16,7 +16,7 @@ const Puppies = () => (
         ) {
           childImageSharp {
             fluid(maxWidth: 760) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
@@ -68,7 +68,7 @@ const Puppies = () => (
           </Grid>
           <Grid inverse>
             <InsideGridDiv>
-              <h3>Socialisering</h3>
+              <h3>Vores hvalpe er vandt til:</h3>
               <List>
                 <ListItem>At køre bil</ListItem>
                 <ListItem>Skud med hundeprop</ListItem>
@@ -160,6 +160,7 @@ const Grid = styled.div`
   justify-items: center;
   margin: 24px 0;
   padding-bottom: 24px;
+  margin-top: 30px;
 
   ${props =>
     props.inverse &&
@@ -205,6 +206,9 @@ const List = styled.ul`
   border-bottom-right-radius: 4px;
   border-top: 3px solid '#000';
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.16);
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
 `;
 
 const ListItem = styled.li`
