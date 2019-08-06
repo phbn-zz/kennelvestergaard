@@ -26,7 +26,7 @@ const Puppies = () => (
           name: { eq: "IMG_3760" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 760) {
+            fluid(maxWidth: 760, maxHeight: 900) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
@@ -37,7 +37,7 @@ const Puppies = () => (
           name: { eq: "IMG_3432" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 760) {
+            fluid(maxWidth: 760, maxHeight: 900) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
