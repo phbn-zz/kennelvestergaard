@@ -15,6 +15,7 @@ const Bitch = () => (
           childImageSharp {
             fluid(maxWidth: 760) {
               ...GatsbyImageSharpFluid
+              originalImg
             }
           }
         }
@@ -26,6 +27,7 @@ const Bitch = () => (
           childImageSharp {
             fluid(maxWidth: 760) {
               ...GatsbyImageSharpFluid
+              originalImg
             }
           }
         }
@@ -55,10 +57,16 @@ const Bitch = () => (
                 roen i selv de meste spændene situationer.
               </p>
             </div>
-            <ImageContainer fluid={data.profil.childImageSharp.fluid} />
+            <ImageContainer
+              fluid={data.profil.childImageSharp.fluid}
+              originalImg={data.profil.childImageSharp.originalImg}
+            />
           </Grid>
           <Grid>
-            <ImageContainer fluid={data.stamtavle.childImageSharp.fluid} />
+            <ImageContainer
+              fluid={data.stamtavle.childImageSharp.fluid}
+              originalImg={data.profil.childImageSharp.originalImg}
+            />
             <p>
               Nanas største opgave er dog at være familiehund, hvilket hun er
               fantastisk til. Katte, små børn, babyer, store heste og kæmpe

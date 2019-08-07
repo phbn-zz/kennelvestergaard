@@ -26,10 +26,10 @@
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
     "react-images": "^1.0.0",
-    "react-photo-gallery": "^8.0.0",
     "react-scrollspy": "^3.3.5",
     "rebass": "^3.1.2",
-    "styled-components": "^4.1.3"
+    "styled-components": "^4.1.3",
+    "styled-react-modal": "^1.2.4"
   },
   "keywords": [
     "kennel",

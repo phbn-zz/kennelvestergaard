@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { Link } from 'gatsby';
 
 const getRandomColor = alpha => {
   let r = Math.floor(Math.random() * 255);
@@ -134,4 +135,54 @@ export const Divider = styled.hr`
   margin-bottom: 15px;
 
   ${props => (props.inverse ? 'margin-left: 0;' : 'margin-right: 0;')}
+`;
+
+export const StyledHyperlink = styled.a`
+  cursor: pointer;
+  color: ${props => props.theme.color.orange};
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+
+  &:before {
+    background-color: ${props => props.theme.color.orange};
+    content: '';
+    height: 2px;
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+    width: 100%;
+  }
+  &:hover {
+    &:before {
+      width: 0%;
+    }
+  }
+`;
+
+export const StyledInternallink = styled(Link)`
+  cursor: pointer;
+  color: ${props => props.theme.color.orange};
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+
+  &:before {
+    background-color: ${props => props.theme.color.orange};
+    content: '';
+    height: 2px;
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+    width: 100%;
+  }
+  &:hover {
+    &:before {
+      width: 0%;
+    }
+  }
 `;

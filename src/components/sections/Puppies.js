@@ -1,10 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
-import { Link } from 'gatsby';
 import ImageContainer from '../common/ImageContainer';
 
-import { Section, Container, HeaderText, Divider } from '@components/global';
+import {
+  Section,
+  Container,
+  HeaderText,
+  Divider,
+  StyledHyperlink,
+  StyledInternallink
+} from '@components/global';
 
 const Puppies = () => (
   <StaticQuery
@@ -59,7 +65,8 @@ const Puppies = () => (
                 in reprehenderit in voluptate velit esse cillum dolore eu fugiat
                 nulla pariatur. Excepteur sint occaecat cupidatat non proident,
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Faren er <Link to="/Prius">Prius</Link>
+                Faren er{' '}
+                <StyledInternallink to="/Prius">Prius</StyledInternallink>
               </p>
             </div>
             <Art>
@@ -93,9 +100,9 @@ const Puppies = () => (
                 så det er muligt at se, hvad de små oplever her hos os. Når I
                 har fået jeres nye hvalp med hjem vil prægningen naturligvis
                 fortsætte. Jeg vil anbefale jer at læse{' '}
-                <Link to="/DogDevelopment">
+                <StyledInternallink to="/DogDevelopment">
                   Hundens fysiske og psykiske udvikling
-                </Link>
+                </StyledInternallink>
                 , og ønsker I yderligere, så kan bogen Retriever hvalpe- træning
                 af Norman Zvolsky anbefales.
               </p>
@@ -132,9 +139,9 @@ const Puppies = () => (
               <Divider inverse />
               <p>
                 Jeg kan på det varmeste anbefale{' '}
-                <a href="https://www.dansk-retriever-klub.dk/">
+                <StyledHyperlink href="https://www.dansk-retriever-klub.dk/">
                   Dansk Retriever Klub
-                </a>
+                </StyledHyperlink>
                 , til træning af hunden. Deres træning er særlig tilpasset netop
                 vores hunderace, og der er en særlig forståelse for retrieverens
                 behov og udvikling. Derudover tilbyder de mange forskellige

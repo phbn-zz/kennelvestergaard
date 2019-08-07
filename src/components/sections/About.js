@@ -1,7 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Section, Container, Grid, HeaderText } from '@components/global';
+import {
+  Section,
+  Container,
+  Grid,
+  HeaderText,
+  StyledHyperlink
+} from '@components/global';
 
 const Links = [
   { link: 'http://www.flatcoat.dk', name: 'FlatCoat.dk' },
@@ -43,7 +49,9 @@ const About = () => (
             {Links.map(link => {
               return (
                 <ListItem>
-                  <a href={link.link}>{link.name}</a>
+                  <StyledHyperlink href={link.link}>
+                    {link.name}
+                  </StyledHyperlink>
                 </ListItem>
               );
             })}

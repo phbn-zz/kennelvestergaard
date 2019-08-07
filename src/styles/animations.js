@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 
 const wave = keyframes`
   0% {
@@ -54,8 +54,4 @@ export const UpDownWide = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-`;
-
-export const waveAnimation = (length: string) => css`
-  animation: ${wave} ${length} linear infinite alternate;
 `;

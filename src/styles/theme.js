@@ -23,6 +23,7 @@ const theme = {
       regular: '#211E26',
       colormind: '#17151F'
     },
+    orange: '#D78849',
     primary: '#80bdff'
   },
   screen: {
