@@ -14,7 +14,7 @@ import {
 import { InternalLink, InternalPageLink } from '@common/IELinks';
 
 const SellingPoints = [
-  'Vores hvalpe er født og vokser med sundhed og trivsel i fokus',
+  'Vores hvalpe er født og opdrættet med sundhed og trivsel i fokus',
   'Hvalpe der har start på livet i rolige landlige omgivelser, med børn og andre dyr omkring sig',
   'Hvalpe der er fra gode jagtlinjer, både tæve og hanhund'
 ];
