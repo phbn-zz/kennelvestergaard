@@ -122,7 +122,19 @@ export const HeaderText = styled.h2`
   font-size: 40px;
   animation: ${HeaderLoader} 2s 0s;
   font-family: ${props => props.theme.font.headers};
-  color: ${props => props.theme.color.black.colormind};
+  color: ${props => props.theme.color.black.rounded};
+`;
+
+export const HeaderListItem = styled.li`
+  margin: 10px;
+  opacity: 0;
+  font-size: 20px;
+  animation-name: ${HeaderLoader};
+  animation-duration: 4s;
+  animation-delay: ${props => props.delay};
+  animation-fill-mode: forwards;
+  font-family: ${props => props.theme.font.headers};
+  color: ${props => props.theme.color.black.rounded};
 `;
 
 export const Divider = styled.hr`

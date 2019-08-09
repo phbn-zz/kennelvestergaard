@@ -1,5 +1,14 @@
 import styled, { keyframes, css } from 'styled-components';
 
+const fadeIn = keyframes`
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+`;
+
 const wave = keyframes`
   0% {
     d: path("M 0 100 Q 250 50 400 200 Q 550 350 800 300 L 800 0 L 0 0 L 0 100 Z");

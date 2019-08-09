@@ -51,26 +51,31 @@ const Puppies = () => (
       }
     `}
     render={data => (
-      <Section id="hvalpe">
+      <Section id="om din hvalp">
         <Container>
           <Grid>
             <div>
-              <HeaderText>Første kuld 2019</HeaderText>
+              <HeaderText>En god start</HeaderText>
               <Divider />
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Faren er{' '}
-                <StyledInternallink to="/Prius">Prius</StyledInternallink>
+                Vi gør vores bedste for at hvalpen har fået den bedst tænkelige
+                start på livet. I kan bl.a. se under Socialisering af hvalpe fra
+                de er 3 uger til 8 uger, hvilken miljøtræning hvalpene har været
+                igennem sammen med Nana. Jeg vil løbende holde listen ajourført,
+                så det er muligt at se, hvad de små oplever her hos os. Når I
+                har fået jeres nye hvalp med hjem vil prægningen naturligvis
+                fortsætte. Jeg vil anbefale jer at læse{' '}
+                <StyledInternallink to="/DogDevelopment">
+                  Hundens fysiske og psykiske udvikling
+                </StyledInternallink>
+                , og ønsker I yderligere, så kan bogen Retriever hvalpe- træning
+                af Norman Zvolsky anbefales.
               </p>
             </div>
             <Art>
-              <ImageContainer fluid={data.puppies.childImageSharp.fluid} />
+              <ImageContainer
+                fluid={data.nana_practice.childImageSharp.fluid}
+              />
             </Art>
           </Grid>
           <Grid inverse>
@@ -90,28 +95,8 @@ const Puppies = () => (
               </List>
             </InsideGridDiv>
             <div>
-              <HeaderText>En god start</HeaderText>
-              <Divider inverse />
-              <p>
-                Vi gør vores bedste for at hvalpen har fået den bedst tænkelige
-                start på livet. I kan bl.a. se under Socialisering af hvalpe fra
-                de er 3 uger til 8 uger, hvilken miljøtræning hvalpene har været
-                igennem sammen med Nana. Jeg vil løbende holde listen ajourført,
-                så det er muligt at se, hvad de små oplever her hos os. Når I
-                har fået jeres nye hvalp med hjem vil prægningen naturligvis
-                fortsætte. Jeg vil anbefale jer at læse{' '}
-                <StyledInternallink to="/DogDevelopment">
-                  Hundens fysiske og psykiske udvikling
-                </StyledInternallink>
-                , og ønsker I yderligere, så kan bogen Retriever hvalpe- træning
-                af Norman Zvolsky anbefales.
-              </p>
-            </div>
-          </Grid>
-          <Grid>
-            <div>
               <HeaderText>Praktisk om din hvalp</HeaderText>
-              <Divider />
+              <Divider inverse />
               <p>
                 Hvalpen er chippet og har DKK stambog. Derudover har den fået
                 ormekur. Husk, at den skal have ormekur igen inden 12 ugers
@@ -122,21 +107,11 @@ const Puppies = () => (
                 indtil hvalpen er faldet godt til i sit nye hjem.
               </p>
             </div>
-            <Art>
-              <ImageContainer
-                fluid={data.nana_practice.childImageSharp.fluid}
-              />
-            </Art>
           </Grid>
-          <Grid inverse>
-            <Art>
-              <ImageContainer
-                fluid={data.nana_practice_2.childImageSharp.fluid}
-              />
-            </Art>
+          <Grid>
             <div>
               <HeaderText>Videre opdragelse</HeaderText>
-              <Divider inverse />
+              <Divider />
               <p>
                 Jeg kan på det varmeste anbefale{' '}
                 <StyledHyperlink href="https://www.dansk-retriever-klub.dk/">
@@ -152,6 +127,11 @@ const Puppies = () => (
                 medlemskab til DRK.
               </p>
             </div>
+            <Art>
+              <ImageContainer
+                fluid={data.nana_practice_2.childImageSharp.fluid}
+              />
+            </Art>
           </Grid>
         </Container>
       </Section>

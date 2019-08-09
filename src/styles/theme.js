@@ -13,6 +13,7 @@ const theme = {
   },
   color: {
     brandBlue: '#005cbf',
+    steelBlue: '#267da1',
     white: {
       regular: '#FFFFFF',
       dark: '#F6F6F6'
@@ -20,6 +21,7 @@ const theme = {
     black: {
       lighter: '#ABA8AF',
       light: '#564F62',
+      rounded: '#3d4550',
       regular: '#211E26',
       colormind: '#17151F'
     },

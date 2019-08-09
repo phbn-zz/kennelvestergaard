@@ -1,10 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
-import { UpDown, UpDownWide } from '../../styles/animations';
-import SVG from '../common/svg';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 
-import { Container, HeaderText } from '@components/global';
-import ExternalLink from '@common/ExternalLink';
+import {
+  Container,
+  HeaderText,
+  Divider,
+  StyledInternallink,
+  HeaderListItem
+} from '@components/global';
+import { InternalLink, InternalPageLink } from '@common/IELinks';
+
+const SellingPoints = [
+  'Vores hvalpe er født og vokser med sundhed og trivsel i fokus',
+  'Hvalpe der har start på livet i rolige landlige omgivelser, med børn og andre dyr omkring sig',
+  'Hvalpe der er fra gode jagtlinjer, både tæve og hanhund'
+];
 
 const Header = () => (
   <HeaderWrapper>
@@ -17,11 +30,27 @@ const Header = () => (
           </HeaderText>
           <br />
           <p>
-            <ExternalLink href="hvalpe">
+            <InternalLink href="hvalpe">
               Se vores kuld &nbsp;&#x2794;
-            </ExternalLink>
+            </InternalLink>
+            <InternalLink href="tæve">Om tæven &nbsp;&#x2794;</InternalLink>
+            <InternalPageLink href="/Prius">
+              Om hanhunden &nbsp;&#x2794;
+            </InternalPageLink>
           </p>
         </Text>
+        <div>
+          <HeaderText>Første kuld 2019</HeaderText>
+          <List>
+            {SellingPoints.map((point, index) => {
+              const delayCalc = 2 + index;
+              const delay = delayCalc.toString();
+              return (
+                <HeaderListItem delay={`${delay}s`}>{point}</HeaderListItem>
+              );
+            })}
+          </List>
+        </div>
       </Grid>
     </Container>
   </HeaderWrapper>

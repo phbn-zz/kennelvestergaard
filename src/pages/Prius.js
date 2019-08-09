@@ -6,7 +6,7 @@ import NavbarSecondpage from '../components/common/Navbar/NavBarSecondPages';
 
 import Masonry from '../components/common/Masonry';
 import Layout from '@common/Layout';
-import { Container, Section } from '@components/global';
+import { Container, Section, StyledHyperlink } from '@components/global';
 
 const Prius = () => (
   <Layout>
@@ -40,7 +40,11 @@ const Prius = () => (
               på markprøve i England i de senere år. Han har to søskende i
               England som sidst jagtsæson tog SDC “A”, hvor Helen havde dem
               begge med på samme prøve. Prius har en enestående evne til
-              afkobling og er megt lydhør over for, hvad der ønskes af ham.
+              afkobling og er megt lydhør over for, hvad der ønskes af ham.{' '}
+              <br />
+              <StyledHyperlink href="http://friia.dk/">
+                Læs mere om Prius på deres hjemmeside.
+              </StyledHyperlink>
             </p>
             <Masonry
               itemsPerRow={[2]} // This will be changed to `[2, 3]` later
