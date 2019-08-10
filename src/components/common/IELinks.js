@@ -9,6 +9,7 @@ const NavItem = styled.a`
     text-decoration: none;
     opacity: 0.7;
     color: ${props => props.theme.color.black.regular};
+    font-size: ${props => props.theme.font_size.large}
   }
 
   &:hover {

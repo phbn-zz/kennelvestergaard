@@ -146,6 +146,12 @@ export const HeaderListItem = styled.li`
   color: ${props => props.theme.color.black.roundedDark};
   -webkit-text-stroke-width: 0.2px;
   -webkit-text-stroke-color: '#F6F6F6';
+
+  li:before {
+    content: '\1F95E';
+    margin-left: -20px;
+    margin-right: 10px;
+  }
 `;
 
 export const Divider = styled.hr`
@@ -156,6 +162,10 @@ export const Divider = styled.hr`
   width: 65%;
   margin-top: 15px;
   margin-bottom: 15px;
+
+  @media (max-width: ${props => props.theme.screen.md}) {
+    width: 100%
+  }
 
   ${props => (props.inverse ? 'margin-left: 0;' : 'margin-right: 0;')}
 `;

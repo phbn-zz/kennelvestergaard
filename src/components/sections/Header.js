@@ -49,7 +49,7 @@ const Header = () => (
                   Kennel Klubs avlsanbefalinger.
                 </HeaderText>
                 <br />
-                <p>
+                <Links>
                   <InternalLink href="galleri">
                     Se vores kuld &nbsp;&#x2794;
                   </InternalLink>
@@ -59,11 +59,11 @@ const Header = () => (
                   <InternalPageLink href="/Prius">
                     Om hanhunden &nbsp;&#x2794;
                   </InternalPageLink>
-                </p>
+                </Links>
               </Text>
               <InsideGridDiv>
                 <HeaderText colormind>Første kuld 2019</HeaderText>
-                <ul>
+                <List>
                   {SellingPoints.map((point, index) => {
                     const delayCalc = 2 + index;
                     const delay = delayCalc.toString();
@@ -73,7 +73,7 @@ const Header = () => (
                       </HeaderListItem>
                     );
                   })}
-                </ul>
+                </List>
               </InsideGridDiv>
             </Grid>
           </Container>
@@ -126,12 +126,21 @@ const Grid = styled.div`
   }
 `;
 
+const List = styled.ul`
+  text-decoration-style: none;
+`;
+
 const InsideGridDiv = styled.div`
   display: flex;
   flex-direction: column;
-  padding-top: 24px;
   justify-content: center;
   align-items: center;
+  margin-bottom: 75px;
+  margin-top: 75px;
+
+  @media (max-width: ${props => props.theme.screen.md}) {
+    margin-top: 0px;
+  }
 `;
 
 const Text = styled.div`
@@ -141,8 +150,17 @@ const Text = styled.div`
 
   @media (max-width: ${props => props.theme.screen.md}) {
     justify-self: start;
+    margin-bottom: 0px;
   }
 `;
+
+const Links = styled.p`
+display: flex;
+
+ @media (max-width: ${props => props.theme.screen.md}) {
+    flex-direction: column;
+  }
+`
 
 export default Header;
 
