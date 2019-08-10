@@ -81,7 +81,7 @@ const List = styled.ul`
   border-bottom-right-radius: 4px;
   border-top: 3px solid '#000';
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.16);
-  width: 120%;
+  width: 100%;
 `;
 
 const ListItem = styled.li`
@@ -94,12 +94,6 @@ const ListItem = styled.li`
   :first-child {
     border-top: none;
   }
-`;
-
-const p1 = styled.p`
-  ${props => props.theme.font_size.regular};
-  color: ${props => props.theme.color.black.light};
-  text-align: justify;
 `;
 
 const InsideGridDiv = styled.div`
