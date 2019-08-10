@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemAvatar from '@material-ui/core/ListItemAvatar';
+import { StaticQuery, graphql } from 'gatsby';
+import BackgroundImage from 'gatsby-background-image';
 
 import {
   Container,
@@ -12,7 +11,6 @@ import {
   HeaderListItem
 } from '@components/global';
 import { InternalLink, InternalPageLink } from '@common/IELinks';
-
 const SellingPoints = [
   'Vores hvalpe er født og opdrættet med sundhed og trivsel i fokus',
   'Hvalpe der har start på livet i rolige landlige omgivelser, med børn og andre dyr omkring sig',
@@ -20,48 +18,82 @@ const SellingPoints = [
 ];
 
 const Header = () => (
-  <HeaderWrapper>
-    <Container>
-      <Grid>
-        <Text>
-          <HeaderText>
-            Vores hunde er avlet efter Dansk Retriever Klub og Dansk Kennel
-            Klubs avlsanbefalinger.
-          </HeaderText>
-          <br />
-          <p>
-            <InternalLink href="hvalpe">
-              Se vores kuld &nbsp;&#x2794;
-            </InternalLink>
-            <InternalLink href="tæve">Om tæven &nbsp;&#x2794;</InternalLink>
-            <InternalPageLink href="/Prius">
-              Om hanhunden &nbsp;&#x2794;
-            </InternalPageLink>
-          </p>
-        </Text>
-        <div>
-          <HeaderText>Første kuld 2019</HeaderText>
-          <List>
-            {SellingPoints.map((point, index) => {
-              const delayCalc = 2 + index;
-              const delay = delayCalc.toString();
-              return (
-                <HeaderListItem delay={`${delay}s`}>{point}</HeaderListItem>
-              );
-            })}
-          </List>
-        </div>
-      </Grid>
-    </Container>
-  </HeaderWrapper>
+  <StaticQuery
+    query={graphql`
+      query {
+        desktop: file(
+          sourceInstanceName: { eq: "art" }
+          name: { eq: "header" }
+        ) {
+          childImageSharp {
+            fluid(
+              quality: 90
+              maxWidth: 4160
+              duotone: { highlight: "#F6F6F6", shadow: "#a1a1a1" }
+            ) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    `}
+    render={data => {
+      const imageData = data.desktop.childImageSharp.fluid;
+      return (
+        <HeaderWrapper fluid={imageData}>
+          <Container>
+            <Grid>
+              <Text>
+                <HeaderText colormind>
+                  Vores hunde er avlet efter Dansk Retriever Klub og Dansk
+                  Kennel Klubs avlsanbefalinger.
+                </HeaderText>
+                <br />
+                <p>
+                  <InternalLink href="galleri">
+                    Se vores kuld &nbsp;&#x2794;
+                  </InternalLink>
+                  <InternalLink href="tæve">
+                    Om tæven &nbsp;&#x2794;
+                  </InternalLink>
+                  <InternalPageLink href="/Prius">
+                    Om hanhunden &nbsp;&#x2794;
+                  </InternalPageLink>
+                </p>
+              </Text>
+              <InsideGridDiv>
+                <HeaderText colormind>Første kuld 2019</HeaderText>
+                <ul>
+                  {SellingPoints.map((point, index) => {
+                    const delayCalc = 2 + index;
+                    const delay = delayCalc.toString();
+                    return (
+                      <HeaderListItem delay={`${delay}s`}>
+                        {point}
+                      </HeaderListItem>
+                    );
+                  })}
+                </ul>
+              </InsideGridDiv>
+            </Grid>
+          </Container>
+        </HeaderWrapper>
+      );
+    }}
+  />
 );
 
-const HeaderWrapper = styled.header`
+const HeaderWrapper = styled(BackgroundImage)`
   background-color: ${props => props.theme.color.primary};
   padding-top: 96px;
   @media (max-width: ${props => props.theme.screen.md}) {
     padding-top: 128px;
   }
+
+  width: 100%;
+  background-position: bottom center;
+  background-repeat: repeat-y;
+  background-size: cover;
 `;
 
 const Art = styled.figure`
@@ -92,6 +124,14 @@ const Grid = styled.div`
       order: 2;
     }
   }
+`;
+
+const InsideGridDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Text = styled.div`

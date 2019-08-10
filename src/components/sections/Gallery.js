@@ -2,7 +2,7 @@ import React from 'react';
 import Masonry from '../common/Masonry';
 import { StaticQuery, graphql } from 'gatsby';
 
-import { Section, Container, HeaderText } from '@components/global';
+import { Section, Container, HeaderText, Divider } from '@components/global';
 
 const Gallery = () => (
   <StaticQuery

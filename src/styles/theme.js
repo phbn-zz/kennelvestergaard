@@ -22,6 +22,7 @@ const theme = {
       lighter: '#ABA8AF',
       light: '#564F62',
       rounded: '#3d4550',
+      roundedDark: '#31363d',
       regular: '#211E26',
       colormind: '#17151F'
     },

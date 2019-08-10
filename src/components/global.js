@@ -122,7 +122,16 @@ export const HeaderText = styled.h2`
   font-size: 40px;
   animation: ${HeaderLoader} 2s 0s;
   font-family: ${props => props.theme.font.headers};
-  color: ${props => props.theme.color.black.rounded};
+  color: ${props => props.theme.color.black.roundedDark};
+  -webkit-text-stroke-width: 0.4px;
+  -webkit-text-stroke-color: '#F6F6F6';
+`;
+
+export const SubHeader = styled.h3`
+  font-size: 30px;
+  animation: ${HeaderLoader} 2s 0s;
+  font-family: ${props => props.theme.font.headers};
+  color: ${props => props.theme.color.black.roundedDark};
 `;
 
 export const HeaderListItem = styled.li`
@@ -134,7 +143,9 @@ export const HeaderListItem = styled.li`
   animation-delay: ${props => props.delay};
   animation-fill-mode: forwards;
   font-family: ${props => props.theme.font.headers};
-  color: ${props => props.theme.color.black.rounded};
+  color: ${props => props.theme.color.black.roundedDark};
+  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: '#F6F6F6';
 `;
 
 export const Divider = styled.hr`

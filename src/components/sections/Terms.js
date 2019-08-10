@@ -1,5 +1,5 @@
 import React from 'react';
-import { Section, Container, HeaderText } from '@components/global';
+import { Section, Container, HeaderText, Divider } from '@components/global';
 
 const Terms = () => (
   <Section id="købsaftale" accent>

@@ -9,7 +9,8 @@ import {
   HeaderText,
   Divider,
   StyledHyperlink,
-  StyledInternallink
+  StyledInternallink,
+  SubHeader
 } from '@components/global';
 
 const Puppies = () => (
@@ -80,9 +81,9 @@ const Puppies = () => (
           </Grid>
           <Grid inverse>
             <InsideGridDiv>
-              <h3>Vores hvalpe er vandt til:</h3>
+              <SubHeader>Miljøtræning med hvalpe</SubHeader>
               <List>
-                <ListItem>At køre bil</ListItem>
+                <ListItem>Køre bil</ListItem>
                 <ListItem>Skud med hundeprop</ListItem>
                 <ListItem>Dødt vildt fasan</ListItem>
                 <ListItem>Fløjte signal</ListItem>
@@ -91,7 +92,7 @@ const Puppies = () => (
                 <ListItem>Heste</ListItem>
                 <ListItem>Hunde</ListItem>
                 <ListItem>Katte</ListItem>
-                <ListItem>Andre mennesker</ListItem>
+                <ListItem>Fremmede hunde</ListItem>
               </List>
             </InsideGridDiv>
             <div>

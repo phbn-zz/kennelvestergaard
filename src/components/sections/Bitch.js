@@ -2,7 +2,13 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import ImageContainer from '../common/ImageContainer';
 
-import { Section, Container, Grid, HeaderText } from '@components/global';
+import {
+  Section,
+  Container,
+  Grid,
+  HeaderText,
+  Divider
+} from '@components/global';
 
 const Bitch = () => (
   <StaticQuery
@@ -39,6 +45,7 @@ const Bitch = () => (
           <Grid>
             <div>
               <HeaderText>Nana</HeaderText>
+              <Divider />
               <p>
                 Nana er en energiske hund, hun er altid glad og imødekommende
                 både overfor mennesker og dyr. Hun er en klog hund, som er

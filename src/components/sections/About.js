@@ -6,12 +6,23 @@ import {
   Container,
   Grid,
   HeaderText,
-  StyledHyperlink
+  StyledHyperlink,
+  Divider,
+  SubHeader
 } from '@components/global';
 
 const Links = [
+  {
+    link: 'http://www.flatcoat.dk/planlagte-kuld',
+    name: 'Vores Planlagte kuld'
+  },
   { link: 'http://www.flatcoat.dk', name: 'FlatCoat.dk' },
-  { link: 'http://www.flatcoat.dk/planlagte-kuld', name: 'Planlagte kuld' },
+  {
+    link:
+      'http://www.flatcoat.dk/upl/website/download/AvlsanbefalingerforFlatcoatedRetriever.pdf',
+    name: 'Avlsanbefalinger for Flatcoated Retriever'
+  },
+
   {
     link: 'https://www.dansk-retriever-klub.dk/',
     name: 'Dansk Retriever Klub'
@@ -36,15 +47,15 @@ const About = () => (
             hvis det er helt umuligt.
           </p>
           <br />
-          <p1>
+          <p>
             Kontakt: <br />
             Tessebøllevej 49, 4681 Herfølge <br />
             Mai-Britt 30461724 <br />
             maibritt.vestergaard83@gmail.com{' '}
-          </p1>
+          </p>
         </div>
         <InsideGridDiv>
-          <h3>Nyttige links for din hvalps fremtid</h3>
+          <SubHeader>Diverse links</SubHeader>
           <List>
             {Links.map(link => {
               return (
@@ -70,7 +81,7 @@ const List = styled.ul`
   border-bottom-right-radius: 4px;
   border-top: 3px solid '#000';
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.16);
-  width: 65%;
+  width: 120%;
 `;
 
 const ListItem = styled.li`
