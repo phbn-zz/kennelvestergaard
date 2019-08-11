@@ -11,6 +11,7 @@ import {
   HeaderListItem
 } from '@components/global';
 import { InternalLink, InternalPageLink } from '@common/IELinks';
+
 const SellingPoints = [
   'Vores hvalpe er født og opdrættet med sundhed og trivsel i fokus',
   'Hvalpe der har start på livet i rolige landlige omgivelser, med børn og andre dyr omkring sig',
@@ -46,16 +47,18 @@ const Header = () => (
               <Text>
                 <HeaderText colormind>
                   Vores hunde er avlet efter Dansk Retriever Klub og Dansk
-                  Kennel Klubs avlsanbefalinger.
+                  Kennel Klubs avlsanbefalinger
                 </HeaderText>
                 <br />
                 <Links>
                   <InternalLink href="tæve">
                     Om tæven &nbsp;&#x2794;
                   </InternalLink>
-                  <InternalPageLink href="/Prius">
-                    Om hanhunden &nbsp;&#x2794;
-                  </InternalPageLink>
+                  <p>
+                    <InternalPageLink href="/Prius">
+                      Om hanhunden &nbsp;&#x2794;
+                    </InternalPageLink>
+                  </p>
                   <InternalLink href="første kuld 2019">
                     Første kuld &nbsp;&#x2794;
                   </InternalLink>
