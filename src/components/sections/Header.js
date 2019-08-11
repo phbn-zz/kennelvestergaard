@@ -128,6 +128,10 @@ const Grid = styled.div`
 
 const List = styled.ul`
   text-decoration-style: none;
+  font-family: ${props => props.theme.font.headers};
+  color: ${props => props.theme.color.black.roundedDark};
+  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: '#F6F6F6';
 `;
 
 const InsideGridDiv = styled.div`
