@@ -6,16 +6,15 @@ import BackgroundImage from 'gatsby-background-image';
 import {
   Container,
   HeaderText,
-  Divider,
-  StyledInternallink,
-  HeaderListItem
+  HeaderListItem,
+  HeaderDivider
 } from '@components/global';
 import { InternalLink, InternalPageLink } from '@common/IELinks';
 
 const SellingPoints = [
   'Vores hvalpe er født og opdrættet med sundhed og trivsel i fokus',
-  'Hvalpe der har start på livet i rolige landlige omgivelser, med børn og andre dyr omkring sig',
-  'Hvalpe der er fra gode jagtlinjer, både tæve og hanhund'
+  'Hvalpene har start på livet i rolige landlige omgivelser, med børn og andre dyr omkring sig',
+  'Er avlet fra gode jagtlinjer, både tæve og hanhund'
 ];
 
 const Header = () => (
@@ -51,21 +50,25 @@ const Header = () => (
                 </HeaderText>
                 <br />
                 <Links>
-                  <InternalLink href="tæve">
-                    Om tæven &nbsp;&#x2794;
-                  </InternalLink>
+                  <p>
+                    <InternalLink href="tæve">
+                      Om tæven &nbsp;&#x2794;
+                    </InternalLink>
+                  </p>
                   <p>
                     <InternalPageLink href="/Prius">
                       Om hanhunden &nbsp;&#x2794;
                     </InternalPageLink>
                   </p>
-                  <InternalLink href="første kuld 2019">
-                    Første kuld &nbsp;&#x2794;
-                  </InternalLink>
+                  <p>
+                    <InternalLink href="første kuld 2019">
+                      Første kuld &nbsp;&#x2794;
+                    </InternalLink>
+                  </p>
                 </Links>
               </Text>
               <InsideGridDiv>
-                <HeaderText colormind>Første kuld 2019</HeaderText>
+                <HeaderDivider />
                 <List>
                   {SellingPoints.map((point, index) => {
                     const delayCalc = 2 + index;
@@ -77,6 +80,7 @@ const Header = () => (
                     );
                   })}
                 </List>
+                <HeaderDivider />
               </InsideGridDiv>
             </Grid>
           </Container>
@@ -131,6 +135,8 @@ const Grid = styled.div`
 
 const List = styled.ul`
   text-decoration-style: none;
+  list-style-type: none;
+  text-align: justify;
   font-family: ${props => props.theme.font.headers};
   color: ${props => props.theme.color.black.roundedDark};
   -webkit-text-stroke-width: 0.2px;
@@ -161,8 +167,10 @@ const Text = styled.div`
   }
 `;
 
-const Links = styled.p`
+const Links = styled.ul`
   display: flex;
+  padding: 0;
+  margin: 0;
 
   @media (max-width: ${props => props.theme.screen.md}) {
     flex-direction: column;
