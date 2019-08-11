@@ -1,19 +1,27 @@
 import React from 'react';
-import { Section, Container, HeaderText, Divider } from '@components/global';
+import styled from 'styled-components';
+import {
+  Section,
+  Container,
+  HeaderText,
+  Divider,
+  StyledHyperlink
+} from '@components/global';
 
 const Terms = () => (
-  <Section id="købsaftale" accent>
+  <Section id="købsaftale" accent="secondary">
+    >
     <Container>
       <div>
         <HeaderText>Købsaftale</HeaderText>
+
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          Vi benytter DKK’s købsaftale, dog betales der et depositum på kr.
+          2.500 ved reservation af hvalp. Fortryder man mod forventning købet,
+          tilbagebetales 2.000 kr.{' '}
+          <StyledHyperlink href="https://www.dkk.dk/uploads/documents/Om-DKK/Blanketter/købsaftale.pdf">
+            Dansk Kennel Klubs Købsaftale kan læses her.
+          </StyledHyperlink>
         </p>
       </div>
     </Container>

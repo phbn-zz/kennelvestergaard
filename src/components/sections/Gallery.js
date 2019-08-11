@@ -27,9 +27,9 @@ const Gallery = () => (
       }
     `}
     render={data => (
-      <Section id="galleri" accent="secondary">
+      <Section id="første kuld 2019" accent="secondary">
         <Container style={{ position: 'relative' }}>
-          <HeaderText>Galleri</HeaderText>
+          <HeaderText>Galleri med Første Kuld 2019</HeaderText>
           <Masonry
             itemsPerRow={[4]} // This will be changed to `[2, 3]` later
             images={data.allFile.edges.map(({ node }) => ({

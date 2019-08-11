@@ -7,7 +7,8 @@ import {
   Container,
   Grid,
   HeaderText,
-  Divider
+  Divider,
+  StyledInternallink
 } from '@components/global';
 
 const Bitch = () => (
@@ -87,7 +88,10 @@ const Bitch = () => (
               reagere på – kan evt. skyldes jagt træningen med hundeprop. Det
               var heller ikke svært at få Nana gjort renlig, da hun var hvalp,
               vi havde også sat 4 ugers ferie af til at få hendes på plads i
-              hjemmet.
+              hjemmet.{' '}
+              <StyledInternallink to="/NanaGalleri">
+                Se et større galleri med billeder af Nana her.
+              </StyledInternallink>
             </p>
           </Grid>
         </Container>

@@ -50,15 +50,15 @@ const Header = () => (
                 </HeaderText>
                 <br />
                 <Links>
-                  <InternalLink href="galleri">
-                    Se vores kuld &nbsp;&#x2794;
-                  </InternalLink>
                   <InternalLink href="tæve">
                     Om tæven &nbsp;&#x2794;
                   </InternalLink>
                   <InternalPageLink href="/Prius">
                     Om hanhunden &nbsp;&#x2794;
                   </InternalPageLink>
+                  <InternalLink href="første kuld 2019">
+                    Første kuld &nbsp;&#x2794;
+                  </InternalLink>
                 </Links>
               </Text>
               <InsideGridDiv>
@@ -155,12 +155,12 @@ const Text = styled.div`
 `;
 
 const Links = styled.p`
-display: flex;
+  display: flex;
 
- @media (max-width: ${props => props.theme.screen.md}) {
+  @media (max-width: ${props => props.theme.screen.md}) {
     flex-direction: column;
   }
-`
+`;
 
 export default Header;
 
