@@ -4,26 +4,27 @@ import {
   Section,
   Container,
   HeaderText,
-  Divider,
-  StyledHyperlink
+  InnerDiv,
+  StyledHyperlink,
+  HeaderDivider
 } from '@components/global';
 
 const Terms = () => (
   <Section id="købsaftale" accent="secondary">
     >
     <Container>
-      <div>
+      <InnerDiv>
         <HeaderText>Købsaftale</HeaderText>
 
         <p>
-          Vi benytter DKK’s købsaftale, dog betales der et depositum på kr.
-          2.500 ved reservation af hvalp. Fortryder man mod forventning købet,
-          tilbagebetales 2.000 kr.{' '}
+          Vi afbenytter Dansk Kennel Klubs’s købsaftale. Udover dette indbetales
+          et depositum på 2.500 kr. ved reservation af hvalp. Fortryder man imod
+          forventning købet, tilbagebetales 2.000 kr.{' '}
           <StyledHyperlink href="https://www.dkk.dk/uploads/documents/Om-DKK/Blanketter/købsaftale.pdf">
-            Dansk Kennel Klubs Købsaftale kan læses her.
+            Dansk Kennel Klub's købsaftale kan læses her.
           </StyledHyperlink>
         </p>
-      </div>
+      </InnerDiv>
     </Container>
   </Section>
 );

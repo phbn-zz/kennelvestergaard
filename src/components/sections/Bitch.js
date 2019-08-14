@@ -48,21 +48,21 @@ const Bitch = () => (
               <HeaderText>Nana</HeaderText>
               <Divider />
               <p>
-                Nana er en energiske hund, hun er altid glad og imødekommende
+                Nana er en energisk hund. Hun er altid glad og imødekommende,
                 både overfor mennesker og dyr. Hun er en klog hund, som er
-                lærernem og har et ustoppeligt drive – hun bliver ved, så det
-                har været vores opgave at vurdere hvornår det var tid til at
-                tage en pause. Hun er trænet i jagt hos Danske Retriever klub,
-                derudover almindelig familiehund lydighed og nosework. Nana har
-                bestået brugsprøven, og været på flere uofficielle green
-                workingtest, en enkelt fasanjagt er det da også blevet til. Hun
-                er god til at håndtere vildt, både i træning med døde (kolde)
-                fugle, og på jagt. Hendes største udfordring har været at bevare
-                roen, i siturationer hvor hun skal sidde og vente kan hun godt
-                sidde og ryste, indtil det bliver hendes tur. Det har været
-                noget vi har arbejdet meget med. Derfor er hanhunden valgt udfra
-                en linje hvor man har lagt særlig vægt på at hundene kan bevare
-                roen i selv de meste spændene situationer.
+                lærenem og har et ustoppeligt drive. Hun bliver ved, så det har
+                været vores opgave, at vurdere hvornår det var tid til at tage
+                en pause. Hun er trænet i jagt hos Danske Retriever Klub.
+                Derudover er hun en pragtfuld almindelig familiehund med
+                lydighed og nosework. Nana har bestået brugsprøven, og været på
+                flere uofficielle green workingtests, og en enkelt fasanjagt er
+                det da også blevet til. Hun er god til at håndtere vildt, både i
+                træning med døde (kolde) fugle, og på jagt. Hendes største
+                udfordring har været at bevare roen. I situationer hvor hun skal
+                sidde og vente, kan hun godt ryste, indtil det bliver hendes
+                tur. Det har været noget vi har arbejdet meget med. Derfor er
+                hanhunden valgt udfra en linje, hvor man har lagt særlig vægt på
+                at hundene kan bevare roen i selv de meste spændene situationer.
               </p>
             </div>
             <ImageContainer
@@ -76,19 +76,19 @@ const Bitch = () => (
               originalImg={data.profil.childImageSharp.originalImg}
             />
             <p>
-              Nanas største opgave er dog at være familiehund, hvilket hun er
+              Nanas primære opgave er dog at være familiehund, hvilket hun er
               fantastisk til. Katte, små børn, babyer, store heste og kæmpe
               maskiner – alt tager hun med ro og følger glad familien hvor end
               vi er. Bliver pigerne for meget, afleder hun dem ved at slikke dem
-              i ansigtet – så stoppe de.. Hun slikker meget, så det er nok noget
-              man skal have fokus på fra starten hvis man synes det er
-              irriterende. Vi har aldrig oplevet at Nana er bang for noget,
-              hverken at være alene hjemme (heller ikke fremmede steder fx på
-              ferie), høje lyde som fx fyrværkeri er heller ikke noget hun
-              reagere på – kan evt. skyldes jagt træningen med hundeprop. Det
-              var heller ikke svært at få Nana gjort renlig, da hun var hvalp,
-              vi havde også sat 4 ugers ferie af til at få hendes på plads i
-              hjemmet.{' '}
+              i ansigtet – så stopper de... Hun slikker meget, så det er nok
+              noget man skal have fokus på fra starten, hvis man synes det er
+              irriterende. <br />
+              Vi har aldrig oplevet at Nana bliver bange for noget, hverken at
+              være alene hjemme (heller ikke fremmede steder f.eks. på ferie),
+              eller høje lyde som f.eks. fx fyrværkeri – måske grundet
+              jagttræningen med hundeprop. Det var heller ikke svært at få Nana
+              gjort renlig, da hun var hvalp. Vi havde dog sat 4 ugers ferie af
+              til at få hendes på plads i hjemmet.
               <StyledInternallink to="/NanaGalleri">
                 Se et større galleri med billeder af Nana her.
               </StyledInternallink>

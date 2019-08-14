@@ -41,21 +41,22 @@ const About = () => (
         <div>
           <HeaderText>Om os</HeaderText>
           <p>
-            Vi bor i udkanten af Herfølge, på et mindre husmandssted hvor Nana
-            for det meste bevæger sig frit rundt. Udover Nana har vi katte og
-            heste. Hvalpe besøgstid lørdag mellem kl. 10 – 12. Evt. efter aftale
-            hvis det er helt umuligt.
+            Vi bor i udkanten af Herfølge, på et mindre husmandssted hvor Nana,
+            for det meste, bevæger sig frit rundt. Udover Nana har vi katte og
+            heste. Besøgstid for hvalpene er lørdage mellem kl. 10 – 12.
+            <br />
+            Evt. efter aftale.
           </p>
           <br />
           <p>
             Kontakt: <br />
             Tessebøllevej 49, 4681 Herfølge <br />
-            Mai-Britt 30461724 <br />
+            Mai-Britt 30 46 17 24 <br />
             maibritt.vestergaard83@gmail.com{' '}
           </p>
         </div>
-        <InsideGridDiv>
-          <SubHeader>Diverse links</SubHeader>
+        <div>
+          <HeaderText>Diverse links</HeaderText>
           <List>
             {Links.map(link => {
               return (
@@ -67,7 +68,7 @@ const About = () => (
               );
             })}
           </List>
-        </InsideGridDiv>
+        </div>
       </Grid>
     </Container>
   </Section>
@@ -76,11 +77,6 @@ const About = () => (
 const List = styled.ul`
   list-style: none;
   padding: 0px 20px;
-  background-color: #fff;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  border-top: 3px solid '#000';
-  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.16);
   width: 100%;
 `;
 
@@ -90,7 +86,6 @@ const ListItem = styled.li`
   padding: 5px 0px;
   ${props => props.theme.font_size.small};
   color: ${props => props.theme.color.black.light};
-  border-top: 1px solid #e0dddd;
   :first-child {
     border-top: none;
   }

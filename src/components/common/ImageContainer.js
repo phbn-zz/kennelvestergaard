@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 import { Link } from 'rebass';
 import Modal from 'styled-react-modal';
+import stamtavle from '../../images/art/nana_stamtavle.jpg';
 
 class ImageContainer extends React.Component {
   state = {
@@ -30,8 +31,8 @@ class ImageContainer extends React.Component {
         >
           <ModalContent>
             <Img fluid={this.props.fluid} />
+            <button onClick={this.handleCloseModal}>Close me</button>
           </ModalContent>
-          <button onClick={this.handleCloseModal}>Close me</button>
         </StyledModal>
       </ImageBox>
     );
@@ -39,8 +40,9 @@ class ImageContainer extends React.Component {
 }
 
 const ModalContent = styled.div`
-  max-height: 500px;
-  max-width: 380px;
+  margin: 15px;
+  max-width: 700px;
+  width: 100%;
 `;
 
 const StyledModal = Modal.styled`

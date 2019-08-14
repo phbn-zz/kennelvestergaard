@@ -112,6 +112,15 @@ export const Grid = styled.div`
   }
 `;
 
+export const InnerDiv = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  h2 {
+    margin-bottom: 16px;
+  }
+`;
+
 const Art = styled.figure`
   margin: 0;
   max-width: 380px;
@@ -119,6 +128,15 @@ const Art = styled.figure`
 `;
 
 export const HeaderText = styled.h2`
+  font-size: 40px;
+  animation: ${HeaderLoader} 2s 0s;
+  font-family: ${props => props.theme.font.headers};
+  color: ${props => props.theme.color.black.roundedDark};
+  -webkit-text-stroke-width: 0.4px;
+  -webkit-text-stroke-color: '#F6F6F6';
+`;
+
+export const HeaderTextNonGrid = styled.h2`
   font-size: 40px;
   animation: ${HeaderLoader} 2s 0s;
   font-family: ${props => props.theme.font.headers};
@@ -167,8 +185,8 @@ export const Divider = styled.hr`
 export const HeaderDivider = styled.hr`
   display: flex;
   border: none;
-  height: 4px;
-  background-color: ${props => props.theme.color.brandBlue};
+  height: 2px;
+  background-color: ${props => props.theme.color.black.rounded};
   opacity: 0.8;
   width: 70%;
   margin-top: 8px;

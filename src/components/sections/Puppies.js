@@ -60,16 +60,15 @@ const Puppies = () => (
               <Divider />
               <p>
                 Vi gør vores bedste for at hvalpen har fået den bedst tænkelige
-                start på livet. I kan bl.a. se under Socialisering af hvalpe fra
-                de er 3 uger til 8 uger, hvilken miljøtræning hvalpene har været
-                igennem sammen med Nana. Jeg vil løbende holde listen ajourført,
-                så det er muligt at se, hvad de små oplever her hos os. Når I
-                har fået jeres nye hvalp med hjem vil prægningen naturligvis
-                fortsætte. Jeg vil anbefale jer at læse{' '}
+                start på livet. I kan se til venstre, hvilken miljøtræning
+                hvalpene har været igennem sammen med Nana. Jeg vil løbende
+                holde listen ajourført, så det er muligt at se, hvad de små
+                oplever her hos os. Når I har fået jeres nye hvalp med hjem vil
+                prægningen naturligvis fortsætte. Jeg vil anbefale jer at læse{' '}
                 <StyledInternallink to="/DogDevelopment">
                   Hundens fysiske og psykiske udvikling
                 </StyledInternallink>
-                , og ønsker I yderligere, så kan bogen Retriever hvalpe- træning
+                , og ønsker I yderligere, så kan bogen "Retriever Hvalpetræning"
                 af Norman Zvolsky anbefales.
               </p>
             </div>
@@ -99,13 +98,13 @@ const Puppies = () => (
               <HeaderText>Praktisk om din hvalp</HeaderText>
               <Divider inverse />
               <p>
-                Hvalpen er chippet og har DKK stambog. Derudover har den fået
-                ormekur. Husk, at den skal have ormekur igen inden 12 ugers
-                vaccinen, så det er en god ide at tale med dyrlægen i god tid,
-                inden den er 12 uger. Hvalpen har sundhedsattest og er blevet
-                vaccineret. Hvalpene er blevet fodret med Royal Canin Maxi
-                Starter, og jeg vil anbefale, at I fortsætter med dette foder,
-                indtil hvalpen er faldet godt til i sit nye hjem.
+                Hvalpen er chippet og har Dansk Kennel Klub's stambog. Derudover
+                har den fået ormekur. Husk, at den skal have ormekur igen inden
+                12 ugers vaccinen, så det er en god ide at tale med dyrlægen i
+                god tid, inden den er 12 uger. Hvalpen har sundhedsattest og er
+                blevet vaccineret. Hvalpene er blevet fodret med Royal Canin
+                Maxi Starter, og jeg vil anbefale, at I fortsætter med dette
+                foder, indtil hvalpen er faldet godt til i sit nye hjem.
               </p>
             </div>
           </Grid>
@@ -122,10 +121,10 @@ const Puppies = () => (
                 vores hunderace, og der er en særlig forståelse for retrieverens
                 behov og udvikling. Derudover tilbyder de mange forskellige
                 træningsformer, alt efter hvad man synes er sjovt. Lydighed,
-                familiehunde træning, nosework, jagttræning/markprøver og meget
+                familiehundetræning, nosework, jagttræning/markprøver og meget
                 mere. Vær opmærksom på, at man skal være hurtig ude for at få
                 plads på holdene. Derfor medfølger der en hvalpepakke med 6 mdr.
-                medlemskab til DRK.
+                medlemskab til Dansk Retriever Klub.
               </p>
             </div>
             <Art>
