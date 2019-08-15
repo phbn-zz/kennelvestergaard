@@ -15,6 +15,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `hvalpe`,
+        path: `${__dirname}/src/images/hvalpe`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `prius`,
         path: `${__dirname}/src/images/prius`
       }

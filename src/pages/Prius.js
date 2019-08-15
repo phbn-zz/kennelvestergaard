@@ -41,7 +41,7 @@ const Prius = () => (
         <HeaderWrapper>
           <Container accent="secondary">
             <InnerDiv>
-              <HeaderText>Hanhund til første kuld </HeaderText>
+              <HeaderText>Hanhund til første kuld</HeaderText>
               <HeaderDivider></HeaderDivider>
               <p>
                 Prius er importeret fra England og er efter den mest vindende

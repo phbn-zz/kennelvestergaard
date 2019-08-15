@@ -19,7 +19,7 @@ const Terms = () => (
         <p>
           Vi benytter Dansk Kennel Klub’s købsaftale. I forbindelse med
           reservation af hvalp indbetales et depositum på 2.500 kr. Fortryder
-          man imod forventning reservationen, tilbagebetales 2.000 kr.
+          man imod forventning reservationen, tilbagebetales 2.000 kr.<br />
           <StyledHyperlink href="https://www.dkk.dk/uploads/documents/Om-DKK/Blanketter/købsaftale.pdf">
             Dansk Kennel Klub's købsaftale kan læses her.
           </StyledHyperlink>

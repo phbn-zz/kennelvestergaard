@@ -71,7 +71,7 @@ const Bitch = () => (
               originalImg={data.profil.childImageSharp.originalImg}
             />
           </Grid>
-          <Grid>
+          <Grid inverse>
             <ImageContainer
               fluid={data.stamtavle.childImageSharp.fluid}
               originalImg={data.profil.childImageSharp.originalImg}
