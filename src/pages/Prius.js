@@ -41,18 +41,18 @@ const Prius = () => (
         <HeaderWrapper>
           <Container accent="secondary">
             <InnerDiv>
-              <HeaderText>Hanhund</HeaderText>
+              <HeaderText>Hanhund til første kuld </HeaderText>
               <HeaderDivider></HeaderDivider>
               <p>
                 Prius er importeret fra England og er efter den mest vindende
                 tæve på markprøve i England i de senere år. Han har to søskende
-                i England som sidst jagtsæson tog SDC “A”, hvor Helen havde dem
-                begge med på samme prøve. Prius har en enestående evne til
-                afkobling og er megt lydhør over for, hvad der ønskes af ham.{' '}
+                i England som sidste jagtsæson tog SDC “A”. Prius har en
+                enestående evne til afkobling og er meget lydhør over for, hvad
+                der ønskes af ham.
                 <br />
               </p>
               <StyledHyperlink href="http://friia.dk/">
-                Læs mere om Prius på deres hjemmeside.
+                Læs mere om Prius på Kennel Friias hjemmeside.
               </StyledHyperlink>
             </InnerDiv>
             <Masonry

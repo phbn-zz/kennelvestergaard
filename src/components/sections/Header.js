@@ -22,16 +22,19 @@ const Header = () => (
     query={graphql`
       query {
         desktop: file(
-          sourceInstanceName: { eq: "art" }
-          name: { eq: "header" }
+          sourceInstanceName: { eq: "nana" }
+          name: { eq: "P5033424" }
         ) {
           childImageSharp {
             fluid(
+              maxWidth: 2000
+              maxHeight: 1100
+              cropFocus: CENTER
               quality: 90
-              maxWidth: 4160
               duotone: { highlight: "#F6F6F6", shadow: "#a1a1a1" }
             ) {
               ...GatsbyImageSharpFluid_withWebp
+              presentationWidth
             }
           }
         }
@@ -45,7 +48,7 @@ const Header = () => (
             <Grid>
               <Text>
                 <HeaderText colormind>
-                  Vores hunde er avlet efter Dansk Retriever Klub og Dansk
+                  Vores hunde er avlet efter Dansk Retriever Klubs og Dansk
                   Kennel Klubs avlsanbefalinger
                 </HeaderText>
                 <br />
@@ -98,7 +101,7 @@ const HeaderWrapper = styled(BackgroundImage)`
   }
 
   width: 100%;
-  background-position: bottom center;
+  background-position: top center;
   background-repeat: repeat-y;
   background-size: cover;
 `;

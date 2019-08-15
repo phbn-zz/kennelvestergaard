@@ -17,9 +17,9 @@ const Terms = () => (
         <HeaderText>Købsaftale</HeaderText>
 
         <p>
-          Vi afbenytter Dansk Kennel Klubs’s købsaftale. Udover dette indbetales
-          et depositum på 2.500 kr. ved reservation af hvalp. Fortryder man imod
-          forventning købet, tilbagebetales 2.000 kr.{' '}
+          Vi benytter Dansk Kennel Klub’s købsaftale. I forbindelse med
+          reservation af hvalp indbetales et depositum på 2.500 kr. Fortryder
+          man imod forventning reservationen, tilbagebetales 2.000 kr.
           <StyledHyperlink href="https://www.dkk.dk/uploads/documents/Om-DKK/Blanketter/købsaftale.pdf">
             Dansk Kennel Klub's købsaftale kan læses her.
           </StyledHyperlink>

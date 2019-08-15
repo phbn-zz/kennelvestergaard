@@ -41,11 +41,10 @@ const About = () => (
         <div>
           <HeaderText>Om os</HeaderText>
           <p>
-            Vi bor i udkanten af Herfølge, på et mindre husmandssted hvor Nana,
-            for det meste, bevæger sig frit rundt. Udover Nana har vi katte og
-            heste. Besøgstid for hvalpene er lørdage mellem kl. 10 – 12.
-            <br />
-            Evt. efter aftale.
+            Vi bor i udkanten af Herfølge på et mindre husmandssted, hvor Nana
+            for det meste bevæger sig frit rundt, inde og ude. Udover Nana har
+            vi katte og heste. Besøgstid for hvalpene er lørdage mellem kl. 10 –
+            12. Herudover efter aftale.
           </p>
           <br />
           <p>

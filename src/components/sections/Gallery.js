@@ -14,7 +14,7 @@ const Gallery = () => (
   <StaticQuery
     query={graphql`
       query {
-        allFile(filter: { sourceInstanceName: { eq: "nana" } }) {
+        allFile(filter: { sourceInstanceName: { eq: "hvalpe" } }) {
           edges {
             node {
               relativePath
@@ -40,7 +40,7 @@ const Gallery = () => (
             <HeaderDivider />
           </InnerDiv>
           <Masonry
-            itemsPerRow={[4]} // This will be changed to `[2, 3]` later
+            itemsPerRow={[2]} // This will be changed to `[2, 3]` later
             images={data.allFile.edges.map(({ node }) => ({
               ...node.childImageSharp.fluid,
               caption: `${node.relativePath}`,

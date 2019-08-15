@@ -60,11 +60,12 @@ const Puppies = () => (
               <Divider />
               <p>
                 Vi gør vores bedste for at hvalpen har fået den bedst tænkelige
-                start på livet. I kan se til venstre, hvilken miljøtræning
+                start på livet. I kan her på siden se, hvilken miljøtræning
                 hvalpene har været igennem sammen med Nana. Jeg vil løbende
-                holde listen ajourført, så det er muligt at se, hvad de små
-                oplever her hos os. Når I har fået jeres nye hvalp med hjem vil
-                prægningen naturligvis fortsætte. Jeg vil anbefale jer at læse{' '}
+                holde listen og siden ajourført, så det er muligt at se, hvad de
+                små oplever her hos os. Når I har fået jeres nye hvalp med hjem
+                vil prægningen naturligvis fortsætte. Jeg vil anbefale jer at
+                læse
                 <StyledInternallink to="/DogDevelopment">
                   Hundens fysiske og psykiske udvikling
                 </StyledInternallink>
@@ -123,8 +124,8 @@ const Puppies = () => (
                 træningsformer, alt efter hvad man synes er sjovt. Lydighed,
                 familiehundetræning, nosework, jagttræning/markprøver og meget
                 mere. Vær opmærksom på, at man skal være hurtig ude for at få
-                plads på holdene. Derfor medfølger der en hvalpepakke med 6 mdr.
-                medlemskab til Dansk Retriever Klub.
+                plads på holdene. Der medfølger en hvalpepakke med 6 mdr.
+                medlemskab hos Dansk Retriever Klub.
               </p>
             </div>
             <Art>
