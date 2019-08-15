@@ -1,14 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import { Link } from 'gatsby';
 
-const getRandomColor = alpha => {
-  let r = Math.floor(Math.random() * 255);
-  let g = Math.floor(Math.random() * 255);
-  let b = 200;
-  let a = alpha;
-  return `rgba(${r},${g},${b},${a})`;
-};
-
 const HeaderLoader = keyframes`
 0% {
     opacity: 0;

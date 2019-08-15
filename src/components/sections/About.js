@@ -6,9 +6,7 @@ import {
   Container,
   Grid,
   HeaderText,
-  StyledHyperlink,
-  Divider,
-  SubHeader
+  StyledHyperlink
 } from '@components/global';
 
 const Links = [
@@ -88,14 +86,6 @@ const ListItem = styled.li`
   :first-child {
     border-top: none;
   }
-`;
-
-const InsideGridDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding-top: 24px;
-  justify-content: center;
-  align-items: center;
 `;
 
 export default About;

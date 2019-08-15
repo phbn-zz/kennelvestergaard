@@ -1,15 +1,28 @@
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Link } from 'gatsby';
 
-const NavItem = styled.a`
+const fadein = keyframes`
+0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+`;
+
+const NavItem = styled.div`
   a {
-    margin-right: 20px;
+    display: inline-block;
+    position: relative;
+    animation: ${fadein} 2s 0s;
     text-decoration: none;
+    margin-right: 20px;
     opacity: 0.7;
     color: ${props => props.theme.color.black.regular};
-    font-size: ${props => props.theme.font_size.large}
+    font-size: ${props => props.theme.font_size.large};
   }
 
   &:hover {
