@@ -13,7 +13,9 @@ class NavbarSecondpage extends Component {
       <Nav {...this.props}>
         <StyledContainer>
           <BrandContainer>
-            <Brand>Kennel Vestergaard</Brand>
+            <BrandLink>
+              <Brand>Kennel Vestergaard</Brand>
+            </BrandLink>
             <SocialIcons>
               <a href={'https://www.facebook.com/NanaFlatcoatedRetriever/'}>
                 <img src={FacebookIcon} alt="link" />
@@ -63,5 +65,10 @@ const SocialIcons = styled.div`
     height: 24px;
   }
 `;
+
+const BrandLink = styled(Link)`
+  text-decoration: none;
+`;
+
 
 export default NavbarSecondpage;

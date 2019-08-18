@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'gatsby';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Scrollspy from 'react-scrollspy';
 import styled from 'styled-components';
@@ -69,7 +70,9 @@ class Navbar extends Component {
       <Nav {...this.props}>
         <StyledContainer>
           <BrandContainer>
-            <Brand>Kennel Vestergaard</Brand>
+            <BrandLink to="/">
+              <Brand>Kennel Vestergaard</Brand>
+            </BrandLink>
             <SocialIcons>
               <a href={'https://www.facebook.com/NanaFlatcoatedRetriever/'}>
                 <img src={FacebookIcon} alt="link" />
@@ -120,6 +123,10 @@ const SocialIcons = styled.div`
     width: 24px;
     height: 24px;
   }
+`;
+
+const BrandLink = styled(Link)`
+  text-decoration: none;
 `;
 
 export default Navbar;
