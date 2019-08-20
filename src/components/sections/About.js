@@ -41,8 +41,9 @@ const About = () => (
           <p>
             Vi bor i udkanten af Herfølge på et mindre husmandssted, hvor Nana
             for det meste bevæger sig frit rundt, inde og ude. Udover Nana har
-            vi katte og heste. Besøgstid for hvalpene er fra d. 8/9-2019, lørdage mellem kl. 10 –
-            12. Herudover efter aftale.
+            vi katte og heste. Besøgstid for hvalpene er fra d. 8/9-2019,
+            lørdage mellem kl. 10 – 12. Herudover efter aftale. Hvalpene er klar
+            til at flytte hjemme fra d 12-13/10.
           </p>
           <br />
           <p>
