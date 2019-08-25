@@ -47,7 +47,7 @@ const Gallery = () => (
             </p>
           </InnerDiv>
           <Masonry
-            itemsPerRow={[2]} // This will be changed to `[2, 3]` later
+            itemsPerRow={[4]} // This will be changed to `[2, 3]` later
             images={data.allFile.edges.map(({ node }) => ({
               ...node.childImageSharp.fluid,
               caption: `${node.relativePath}`,
