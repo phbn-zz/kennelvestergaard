@@ -39,9 +39,7 @@ const Gallery = () => (
             <HeaderTextNonGrid>Galleri med Første Kuld 2019</HeaderTextNonGrid>
             <HeaderDivider />
             <p>
-              D. 17 August fik Nana et stjernekuld, 5 hanhunde og 4 tæver. Her
-              er de allerførste billeder af tæverne Capella, Vega, Spice og
-              Bellatrix og hanhundene Alioth, Pollux, Alkes, Castor og Sirius.
+              D. 17 August fik Nana et stjernekuld, 5 hanhunde og 4 tæver.
               Alt gik godt, og alle har det rigtigt godt. Sundhedstjek hos
               dyrlægen, alle har det godt.
             </p>
