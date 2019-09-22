@@ -1,14 +1,14 @@
 var plugins = [{
-      plugin: require('/home/phbr/Dropbox/coding/kennelvestergaard/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      plugin: require('/home/phbr/kennelvestergaard/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/home/phbr/Dropbox/coding/kennelvestergaard/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
+      plugin: require('/home/phbr/kennelvestergaard/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/home/phbr/Dropbox/coding/kennelvestergaard/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      plugin: require('/home/phbr/kennelvestergaard/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"name":"Kennel Vestergaard","short_name":"kvest","start_url":"/","background_color":"#8bd8ed","theme_color":"#8bd8ed","display":"minimal-ui","icon":"static/favicon.svg"},
     },{
-      plugin: require('/home/phbr/Dropbox/coding/kennelvestergaard/node_modules/gatsby-plugin-google-fonts/gatsby-ssr'),
+      plugin: require('/home/phbr/kennelvestergaard/node_modules/gatsby-plugin-google-fonts/gatsby-ssr'),
       options: {"plugins":[],"fonts":["average","prata:400,700"]},
     }]
 // During bootstrap, we write requires at top of this file which looks like:

@@ -1,4 +1,4 @@
 module.exports = [{
-      plugin: require('/home/phbr/Dropbox/coding/kennelvestergaard/gatsby-browser.js'),
+      plugin: require('/home/phbr/kennelvestergaard/gatsby-browser.js'),
       options: {"plugins":[]},
     }]
