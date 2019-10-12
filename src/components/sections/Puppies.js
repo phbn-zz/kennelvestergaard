@@ -97,12 +97,12 @@ const Puppies = () => (
               <Divider inverse />
               <p>
                 Hvalpen er chippet og har Dansk Kennel Klub's stambog. Derudover
-                har den fået ormekur. Husk, at den skal have ormekur igen inden
-                12 ugers vaccinen, så det er en god ide at tale med dyrlægen i
-                god tid, inden den er 12 uger. Hvalpen har sundhedsattest og er
-                blevet vaccineret. Hvalpene er blevet fodret med Royal Canin
-                Maxi Starter, og jeg vil anbefale, at I fortsætter med dette
-                foder, indtil hvalpen er faldet godt til i sit nye hjem.
+                har den fået ormekur. Hvalpen har fået ormekur da den var 3,5 og
+                7 uger. Husk, at hvalpen skal vaccineres igen når den er 12
+                uger. Hvalpen har sundhedsattest og er blevet vaccineret.
+                Hvalpene er blevet fodret med Royal Canin Maxi Starter, og jeg
+                vil anbefale, at I fortsætter med dette foder, indtil hvalpen er
+                faldet godt til i sit nye hjem.
               </p>
             </div>
           </Grid>
